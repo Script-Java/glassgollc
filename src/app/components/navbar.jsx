@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import logo from "../assets/logo-white.svg"; // Adjust the path as necessary
+import logo from "../assets/logo-black.svg"; // Adjust the path as necessary
 import Link from "next/link";
 import Image from "next/image";
 import { MdOutlineMenu } from "react-icons/md";
@@ -22,9 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex max-w-7xl mx-auto justify-between items-center p-4 shadow-md relative transition-all duration-300 ${
-        isMobile ? "bg-black" : "bg-transparent"
-      }`}
+      className={`flex max-w-7xl mx-auto justify-between items-center p-4 relative transition-all duration-300 $`}
     >
       <div>
         <Link href={"/"}>
@@ -33,17 +31,17 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden lg:flex items-center gap-4">
-        <li className="btn btn-ghost">
+      <ul className="hidden lg:flex items-center text-black gap-4">
+        <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
           <Link href="/">Home</Link>
         </li>
-        <li className="btn btn-ghost">
+        <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
           <Link href="/auto">Auto</Link>
         </li>
-        <li className="btn btn-ghost">
+        <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
           <Link href="/residential">Residential</Link>
         </li>
-        <li className="btn btn-outline">
+        <li className="btn btn-outline hover:text-white hover:bg-black transition-colors">
           <Link href="tel:+19724086233">(972) 408-6233</Link>
         </li>
         <li className="btn btn-primary">

@@ -3,13 +3,13 @@ import Link from "next/link";
 import { FaPhone, FaLocationArrow } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import Image from "next/image";
-import logo from "../assets/logo-white.svg";
+import logo from "../assets/logo-black.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className=" text-white py-16 px-6">
+    <footer className="text-black py-16 px-6 border-t-2 border-gray-200 bg-white my-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
         {/* Logo & Description */}
         <div className="flex-1">

@@ -16,7 +16,7 @@ export default function Triple() {
       </section>
 
       {/* GlassGo Highlights */}
-      <section className="my-12 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+      <section className="my-12 text-black px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
         <div>
           <h3 className="text-2xl font-bold text-primary mb-2 border-b border-primary pb-2">CUSTOMER SATISFACTION GUARANTEED</h3>
           <p>

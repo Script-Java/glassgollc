@@ -79,10 +79,10 @@ const Slider = () => {
 
       {/* Arrows */}
       <div className="absolute top-1/2 left-0 right-0 flex justify-between px-4 -translate-y-1/2 z-10">
-        <button onClick={prevSlide} className="btn btn-circle bg-black hover:bg-base-200">
+        <button onClick={prevSlide} className="btn btn-circle bg-white hover:bg-base-200 hover:text-primary">
           ❮
         </button>
-        <button onClick={nextSlide} className="btn btn-circle bg-black hover:bg-base-200">
+        <button onClick={nextSlide} className="btn btn-circle bg-white hover:bg-base-200 hover:text-primary">
           ❯
         </button>
       </div>

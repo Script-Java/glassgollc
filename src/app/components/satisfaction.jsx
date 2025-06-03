@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Satisfaction() {
   return (
-    <div className="">
+    <div className=" text-black">
       <div className="flex items-center mx-auto w-64 justify-center flex-col">
         <Image src={satisfaction} alt="glassgo 100% satisfaction"></Image>
       </div>
@@ -19,7 +19,7 @@ export default function Satisfaction() {
         </p>
         <Link
           href="/quote"
-          className="btn btn-outline text-white text-lg px-6 py-3 rounded-md shadow-md"
+          className="btn btn-outline text-black hover:bg-black hover:text-white text-lg px-6 py-3 rounded-md shadow-md"
         >
           Schedule an Appointment Now
         </Link>

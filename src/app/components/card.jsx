@@ -4,68 +4,296 @@ import img1 from "../assets/img/5.jpg";
 import img2 from "../assets/img/6.jpg";
 import img3 from "../assets/img/7.jpg";
 import img4 from "../assets/img/8.jpg";
+import img5 from "../assets/img/13.jpg";
+import { FaCloudShowersHeavy } from "react-icons/fa";
 
-const slides = [
-  {
-    image: img1,
-    title: "Windshield Replacement & Auto Glass Repair",
-    description:
-      "Cracked or chipped windshield? GlassGo provides fast and reliable auto glass repairs using the highest-quality materials to keep your vehicle safe and road-ready.",
-  },
-  {
-    image: img2,
-    title: "Residential Window Installation",
-    description:
-      "Upgrade your home with stylish and energy-efficient windows. We handle everything from single-pane repairs to full window replacements with precision.",
-  },
-  {
-    image: img3,
-    title: "Emergency Storm Damage Services",
-    description:
-      "When storms strike, our mobile glass team responds fast. From shattered car windows to broken patio doors, we restore your glass quickly and safely.",
-  },
-  {
-    image: img4,
-    title: "Custom Shower Glass & Tabletops",
-    description:
-      "Transform your space with custom-cut glass for showers, vanities, and tables. GlassGo delivers premium results tailored to your home's unique design.",
-  },
-];
 
 const Card = () => {
   return (
-    <section className="bg-base-100 text-white py-16 px-4 md:px-12 max-w-7xl mx-auto">
-      <div className="mb-12">
-        <h1 className="text-2xl text-center md:text-3xl font-bold text-white mb-4">
-          Experience Top-Quality Auto and Residential Glass Replacement in Dallas
-        </h1>
+    <section className="bg-base-100 text-black py-16 px-4 md:px-12 max-w-7xl mx-auto">
+<div className="px-6 py-12 bg-white text-gray-800">
+        <h1 className="text-3xl my-10 lg:text-4xl font-bold text-red-700">
+        Experience Top-Quality Auto and Residential Glass Replacement in Dallas
+      </h1>
+  <div className="w-full mx-auto flex flex-col lg:flex-row gap-10">
+    {/* Left: Text Content */}
+    <div className="flex-1 space-y-6">
+      <div className="space-y-4 text-base leading-relaxed">
+        <p>
+          At GlassGo, we are committed to providing exceptional glass repair and replacement services
+          designed to meet your unique needs. Whether you’re dealing with a cracked windshield, a shattered
+          car window, or a broken home window, our certified technicians deliver reliable, high-quality
+          solutions at an affordable price. We specialize in auto glass repair, including windshield
+          replacement in Dallas, mobile auto glass services, and side or back glass repairs, ensuring you
+          get back on the road quickly and safely. With over 21 years of experience, we use only the finest
+          materials to guarantee your vehicle’s glass is restored to perfection.
+        </p>
+        <p>
+          In addition to auto glass services, we excel in <strong>residential glass repair and replacement.</strong>
+          From fixing broken window panes to custom shower door installations and patio glass replacements,
+          our team delivers expertise and precision in every project. We also offer specialized solutions
+          like frosted glass installation, dual-pane window repair, and glass table top replacements, making
+          GlassGo your one-stop shop for all residential glass needs. Our dedication to customer satisfaction
+          and prompt service has earned us the trust of homeowners throughout the Dallas area. When you
+          choose GlassGo, you can expect skilled professionals, exceptional craftsmanship, and results that
+          exceed your expectations.
+        </p>
+        <p className="font-semibold text-gray-700">
+          Ready to Fix Your Glass? Our mobile ready glass repair and replacement techs are ready to dispatch
+          to your location. Schedule an appointment TODAY!
+        </p>
+      </div>
+      <div className="w-full">
+        <Image src={img1} alt="Glass service showcase" className="w-full h-auto rounded-md object-cover" />
+      </div>
+    </div>
+
+    {/* Right: Vertical Image */}
+    <div className="flex-1 w-full mx-auto lg:mx-0">
+      <Image src={img5} alt="Portrait car image" className="w-full h-full rounded-md object-cover" />
+    </div>
+  </div>
+</div>
+
+
+<section className="px-6 py-20 bg-white text-gray-800">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+    {/* Left: Text and icon */}
+    <div className="space-y-6 flex flex-col justify-between h-full">
+      <div>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="text-primary text-2xl">
+            <FaCloudShowersHeavy />
+          </div>
+          <h2 className="text-3xl font-semibold text-red-700">
+            Expert Storm Damage Glass Replacement in Dallas
+          </h2>
+        </div>
+
+        <div className="space-y-4 text-base leading-relaxed text-gray-700">
+          <p>
+            At <strong>GlassGo</strong>, we specialize in providing reliable storm damage glass repair for both
+            vehicles and homes throughout the <strong>Dallas area</strong>. Our experienced and skilled team is
+            fully equipped to address glass damage caused by hail, high winds, or any other storm-related incidents.
+            Whether your car’s windshield has been cracked by flying debris or your home’s windows have been
+            shattered by a severe storm, we are here to offer quick, affordable, and dependable solutions that
+            restore your peace of mind.
+          </p>
+          <p>
+            With over <strong>21 years of industry experience</strong>, <strong>GlassGo</strong> has earned a
+            reputation for excellence in glass repair and replacement services. We understand how stressful it can be
+            to deal with the aftermath of storm damage, which is why we prioritize a fast and efficient recovery
+            process. Our team is committed to delivering top-quality results, ensuring that your glass is restored to
+            its original condition as quickly as possible.
+          </p>
+          <p>
+            We offer a wide range of <strong>storm damage repair services</strong>, including windshield replacements
+            for vehicles, residential glass repairs for shattered windows, and more. Using the latest tools and
+            techniques, our professionals ensure every job is completed correctly the first time. Additionally, we
+            work directly with your insurance company to streamline the claims process, making it easier and more
+            convenient for you. At <strong>GlassGo</strong>, customer satisfaction is our number one priority, and we
+            strive to provide unmatched service with a focus on quality and reliability.
+          </p>
+        </div>
       </div>
 
-      <div className="grid gap-16">
-        {slides.map((slide, i) => (
-          <div
-            key={i}
-            className={`flex flex-col md:flex-row ${i % 2 === 0 ? "md:flex-row-reverse" : ""} items-center gap-8`}
-          >
-            <div className="w-full md:w-1/2 h-96 relative rounded-xl shadow-lg overflow-hidden">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4 text-primary">
-                {slide.title}
-              </h2>
-              <p className="text-white text-lg">
-                {slide.description}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Our Services Include:</h3>
+        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+          <li>
+            <strong>Windshield Repair & Replacement:</strong> Professional repair and replacement for vehicles
+            damaged by hail or high winds.
+          </li>
+          <li>
+            <strong>Residential Glass Repair:</strong> Prompt and efficient repairs for shattered or cracked windows
+            caused by storms.
+          </li>
+          <li>
+            <strong>Emergency Storm Glass Repair:</strong> Rapid response and expert repairs during storm
+            emergencies.
+          </li>
+          <li>
+            <strong>Insurance Claim Assistance:</strong> Helping you navigate the claims process with ease.
+          </li>
+          <li>
+            <strong>High-Quality Glass Materials:</strong> Durable and reliable materials to ensure long-lasting
+            results.
+          </li>
+          <li>
+            <strong>Expert Installation & Repair:</strong> Certified professionals dedicated to providing
+            high-quality installations and repairs.
+          </li>
+        </ul>
       </div>
+    </div>
+
+    {/* Right: Image */}
+    <div className="w-full h-full">
+      <Image
+        src={img4}
+        alt="Storm damaged car image"
+        className="w-full h-full object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+<section className="px-6 py-20 bg-white text-gray-800">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        {/* Right: Image */}
+    <div className="w-full h-full flex">
+      <Image
+        src={img3}
+        alt="Storm damaged car image"
+        className="w-full h-full object-cover rounded-lg"
+      />
+    </div>
+    {/* Left: Text and icon */}
+    <div className="space-y-6 flex flex-col justify-between">
+      <div>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="text-primary text-2xl">
+            <FaCloudShowersHeavy />
+          </div>
+          <h2 className="text-3xl font-semibold text-red-700">
+            Expert Storm Damage Glass Replacement in Dallas
+          </h2>
+        </div>
+
+        <div className="space-y-4 text-base leading-relaxed text-gray-700">
+          <p>
+            At <strong>GlassGo</strong>, we specialize in providing reliable storm damage glass repair for both
+            vehicles and homes throughout the <strong>Dallas area</strong>. Our experienced and skilled team is
+            fully equipped to address glass damage caused by hail, high winds, or any other storm-related incidents.
+            Whether your car’s windshield has been cracked by flying debris or your home’s windows have been
+            shattered by a severe storm, we are here to offer quick, affordable, and dependable solutions that
+            restore your peace of mind.
+          </p>
+          <p>
+            With over <strong>21 years of industry experience</strong>, <strong>GlassGo</strong> has earned a
+            reputation for excellence in glass repair and replacement services. We understand how stressful it can be
+            to deal with the aftermath of storm damage, which is why we prioritize a fast and efficient recovery
+            process. Our team is committed to delivering top-quality results, ensuring that your glass is restored to
+            its original condition as quickly as possible.
+          </p>
+          <p>
+            We offer a wide range of <strong>storm damage repair services</strong>, including windshield replacements
+            for vehicles, residential glass repairs for shattered windows, and more. Using the latest tools and
+            techniques, our professionals ensure every job is completed correctly the first time. Additionally, we
+            work directly with your insurance company to streamline the claims process, making it easier and more
+            convenient for you. At <strong>GlassGo</strong>, customer satisfaction is our number one priority, and we
+            strive to provide unmatched service with a focus on quality and reliability.
+          </p>
+        </div>
+      </div>
+
+      <div className="pt-4">
+        <h3 className="text-xl font-semibold mb-2">Our Services Include:</h3>
+        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+          <li>
+            <strong>Windshield Repair & Replacement:</strong> Professional repair and replacement for vehicles
+            damaged by hail or high winds.
+          </li>
+          <li>
+            <strong>Residential Glass Repair:</strong> Prompt and efficient repairs for shattered or cracked windows
+            caused by storms.
+          </li>
+          <li>
+            <strong>Emergency Storm Glass Repair:</strong> Rapid response and expert repairs during storm
+            emergencies.
+          </li>
+          <li>
+            <strong>Insurance Claim Assistance:</strong> Helping you navigate the claims process with ease.
+          </li>
+          <li>
+            <strong>High-Quality Glass Materials:</strong> Durable and reliable materials to ensure long-lasting
+            results.
+          </li>
+          <li>
+            <strong>Expert Installation & Repair:</strong> Certified professionals dedicated to providing
+            high-quality installations and repairs.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section className="px-6 py-20 bg-white text-gray-800">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        {/* Left: Text */}
+        <div className="space-y-6 flex flex-col justify-between">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold text-red-700">
+              Our Commitment to Excellence in Glass Repair & Glass Replacement in Dallas
+            </h2>
+            <p className="text-base leading-relaxed text-gray-700">
+              At GlassGo, we don’t just fix glass—we provide <strong>high-quality, long-lasting solutions</strong> for
+              <strong> auto and residential glass repair in Dallas</strong>. Our dedication to <strong>precision, durability, and
+              customer satisfaction</strong> makes us the preferred choice for <strong>windshield replacement, car
+              window repair</strong>, and <strong>home glass replacement</strong> services. From start to finish, we ensure a
+              seamless experience backed by <strong>expert craftsmanship and premium materials</strong>.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold text-red-600 mb-4">
+              What You Can Expect from GlassGo:
+            </h3>
+            <ul className="list-disc list-inside text-sm space-y-2 text-gray-700">
+              <li>
+                <strong>Advanced Repair Techniques –</strong> We use the latest <em>auto glass repair technology</em> to
+                provide <em>windshield replacement, car window replacement</em>, and <em>auto window repair</em> with flawless results.
+              </li>
+              <li>
+                <strong>Eco-Friendly Windshield Repairs –</strong> Whenever possible, we focus on <em>repairing chipped
+                windshields</em> instead of full replacements, reducing costs and waste.
+              </li>
+              <li>
+                <strong>Insurance Assistance –</strong> We work with <em>all major insurance providers</em> to simplify claims
+                for <em>windshield replacement cost</em> and <em>auto glass replacement</em>.
+              </li>
+              <li>
+                <strong>Affordable & Transparent Pricing –</strong> Get a <em>free auto glass quote</em> with no hidden fees for
+                <em> auto windshield replacement, home glass replacement</em>, or <em>window glass repair</em>.
+              </li>
+              <li>
+                <strong>Reliable and Efficient Service –</strong> Whether you need a <em>mobile auto glass repair in Dallas,
+                residential glass repair</em>, or <em>car windshield replacement</em>, we provide <em>same-day auto glass repair</em>
+                and quick installations.
+              </li>
+              <li>
+                <strong>Guaranteed Customer Satisfaction –</strong> Our <em>expert auto glass specialists</em> ensure that every
+                <em> windshield repair service, car side window replacement</em>, or <em>house window replacement</em> meets the
+                highest standards.
+              </li>
+              <li>
+                <strong>Expert Installation –</strong> Our skilled technicians ensure precise installation for all types of auto
+                and residential glass, ensuring optimal performance and longevity.
+              </li>
+              <li>
+                <strong>Comprehensive Glass Services –</strong> From <em>windshield repairs</em> to <em>custom residential glass
+                installations</em>, we offer a full range of services for your vehicle and home, all delivered with the
+                highest level of craftsmanship.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Right: Image */}
+        <div className="w-full h-full">
+          <Image
+            src={img2}
+            alt="Cozy residential window"
+            className="w-full h-full max-h-[820px] object-cover rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
     </section>
   );
 };
