@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import logo from "../assets/logo-black.svg"; // Adjust the path as necessary
+import logo from "../assets/logo-black.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { MdOutlineMenu } from "react-icons/md";
+import { MdOutlineMenu, MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,65 +21,69 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`flex max-w-7xl mx-auto justify-between items-center p-4 relative transition-all duration-300 $`}
-    >
-      <div>
-        <Link href={"/"}>
-          <Image src={logo} alt="Logo" className="w-32" />
-        </Link>
+    <nav className="bg-white shadow-md sticky top-0 z-50 w-full">
+      <div className="flex max-w-7xl mx-auto justify-between items-center p-4">
+        <div>
+          <Link href="/">
+            <Image src={logo} alt="Logo" className="w-32" />
+          </Link>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex items-center text-black gap-4">
+          <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
+            <Link href="/auto">Auto</Link>
+          </li>
+          <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
+            <Link href="/residential">Residential</Link>
+          </li>
+          <li className="btn btn-outline hover:text-white hover:bg-black transition-colors">
+            <Link href="tel:+19724086233">(972) 408-6233</Link>
+          </li>
+          <li className="btn btn-primary">
+            <Link href="/quote">Free Quote</Link>
+          </li>
+        </ul>
+
+        {/* Mobile Menu Toggle */}
+        <button className="lg:hidden btn btn-ghost z-50" onClick={toggleMenu}>
+          {isOpen ? (
+            <MdClose className="text-2xl text-black" />
+          ) : (
+            <MdOutlineMenu className="text-2xl text-black" />
+          )}
+        </button>
       </div>
-
-      {/* Desktop Menu */}
-      <ul className="hidden lg:flex items-center text-black gap-4">
-        <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
-          <Link href="/">Home</Link>
-        </li>
-        <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
-          <Link href="/auto">Auto</Link>
-        </li>
-        <li className="btn btn-ghost hover:text-white hover:bg-black transition-colors">
-          <Link href="/residential">Residential</Link>
-        </li>
-        <li className="btn btn-outline hover:text-white hover:bg-black transition-colors">
-          <Link href="tel:+19724086233">(972) 408-6233</Link>
-        </li>
-        <li className="btn btn-primary">
-          <Link href="/quote">Free Quote</Link>
-        </li>
-      </ul>
-
-      {/* Mobile Menu Toggle */}
-      <button className="lg:hidden btn btn-ghost" onClick={toggleMenu}>
-        <MdOutlineMenu className="text-2xl" />
-      </button>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute bg-black top-full left-0 w-full shadow-lg lg:hidden z-10">
-          <ul className="flex flex-col items-center justify-center p-4 gap-2">
-            <li className="btn btn-ghost">
-              <Link href="/" onClick={() => setIsOpen(false)}>
+        <div className="fixed top-0 left-0 w-full h-full bg-white z-40 flex flex-col justify-center items-center px-6 text-black animate-fade-in">
+          <ul className="flex flex-col items-center w-full gap-6">
+            <li className="btn btn-ghost w-full text-center text-lg">
+              <Link href="/" onClick={toggleMenu}>
                 Home
               </Link>
             </li>
-            <li className="btn btn-ghost">
-              <Link href="/auto" onClick={() => setIsOpen(false)}>
+            <li className="btn btn-ghost w-full text-center text-lg">
+              <Link href="/auto" onClick={toggleMenu}>
                 Auto
               </Link>
             </li>
-            <li className="btn btn-ghost">
-              <Link href="/residential" onClick={() => setIsOpen(false)}>
+            <li className="btn btn-ghost w-full text-center text-lg">
+              <Link href="/residential" onClick={toggleMenu}>
                 Residential
               </Link>
             </li>
-            <li className="btn w-36 btn-outline">
-              <Link href="tel:+19724086233" onClick={() => setIsOpen(false)}>
+            <li className="btn btn-outline w-full text-center text-lg">
+              <Link href="tel:+19724086233" onClick={toggleMenu}>
                 (972) 408-6233
               </Link>
             </li>
-            <li className="btn w-36 btn-primary">
-              <Link href="/quote" onClick={() => setIsOpen(false)}>
+            <li className="btn btn-primary w-full text-center text-lg">
+              <Link href="/quote" onClick={toggleMenu}>
                 Free Quote
               </Link>
             </li>

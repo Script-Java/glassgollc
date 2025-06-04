@@ -9,7 +9,7 @@ const Services = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
+          <div className="text-center md:text-start">
             <h3 className="text-xl font-semibold mb-4 text-primary">Auto Glass Services</h3>
             <ul className="space-y-2 text-base-content">
               <li>Windshield Replacement</li>
@@ -22,7 +22,7 @@ const Services = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-start">
             <h3 className="text-xl font-semibold mb-4 text-primary">Residential Glass</h3>
             <ul className="space-y-2 text-base-content">
               <li>Window Pane Replacement</li>
@@ -35,7 +35,7 @@ const Services = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-start">
             <h3 className="text-xl font-semibold mb-4 text-primary">Commercial Glass</h3>
             <ul className="space-y-2 text-base-content">
               <li>Storefront Windows</li>
@@ -48,7 +48,7 @@ const Services = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-start">
             <h3 className="text-xl font-semibold mb-4 text-primary">Specialty Services</h3>
             <ul className="space-y-2 text-base-content">
               <li>Custom Cut Glass</li>
