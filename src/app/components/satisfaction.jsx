@@ -10,7 +10,7 @@ export default function Satisfaction() {
       </div>
       <div className="text-center mx-auto max-w-3xl">
         <h3 className="text-3xl font-bold mb-6 text-primary">
-          100% Satisfaction Guaranteed
+          100% Workmanship Guarantee
         </h3>
         <p className="text-lg mb-4">
           At GlassGo, we stand behind our work. If you're not completely
@@ -19,7 +19,7 @@ export default function Satisfaction() {
         </p>
         <Link
           href="/quote"
-          className="btn btn-outline text-black hover:bg-black hover:text-white text-lg px-6 py-3 rounded-md shadow-md"
+          className="btn btn-outline text-black hover:bg-primary hover:text-white text-lg px-6 py-3 rounded-md shadow-md"
         >
           Schedule an Appointment Now
         </Link>

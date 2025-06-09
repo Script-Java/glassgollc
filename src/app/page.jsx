@@ -44,18 +44,20 @@ export default function Home() {
             results and flawless finishes.
           </p>
           <p className="max-w-3xl text-lg md:text-xl mb-6">
-            After every repair, our technicians leave your glass spotless using
-            premium wipes, towels, and cleaners. Trust GlassGo for expert
-            craftsmanship and unmatched attention to detail.
+At GlassGo, we only utilize top-grade materials, including high-quality glues, urethanes, and primers, to ensure durability and longevity in every repair or replacement. After completing each job, our highly trained technicians take the time to clean thoroughly, using premium glass wipes, towels, and high-grade glass cleaner, leaving your glass spotless and ready to use. Trust GlassGo for exceptional service, advanced tools, and unmatched attention to detail.
+
+
           </p>
-          <Link
+        </div>
+      </section>
+    <div className="flex items-center justify-center">
+                      <Link
             href="/quote"
-            className="btn btn-outline text-white text-lg px-6 py-3 rounded-md shadow-md"
+            className="btn bg-black text-white hover:bg-primary text-lg px-6 py-3 rounded-md shadow-md"
           >
             Schedule an Appointment Now
           </Link>
-        </div>
-      </section>
+    </div>
       <Triple></Triple>
 
       {/* Trustindex Section */}

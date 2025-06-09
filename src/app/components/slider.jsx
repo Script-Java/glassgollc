@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import img1 from "../assets/img/1.jpg";
 import img2 from "../assets/img/2.jpg";
-import img3 from "../assets/img/3.jpg";
+import img3 from "../assets/img/3.png";
 import img4 from "../assets/img/4.jpg";
 
 const slides = [
@@ -26,7 +26,7 @@ const slides = [
   {
     image: img4,
     heading: "Fast, Affordable, and Reliable Service",
-    description: "Experience quality service trusted by thousands across Texas. At GlassGo, we pride ourselves on quick turnaround times, honest pricing, and customer satisfaction that keeps homeowners and drivers coming back.",
+    description: "Experience quality service trusted by thousands across Dallas and surrounding area. At GlassGo, we pride ourselves on quick turnaround times, honest pricing, and customer satisfaction that keeps homeowners and drivers coming back.",
   },
 ];
 
@@ -47,7 +47,8 @@ const Slider = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
 
   return (
-    <div className="relative w-full overflow-hidden h-[600px]">
+<div className="">
+      <div className="relative w-full overflow-hidden h-[600px]">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -68,7 +69,7 @@ const Slider = () => {
               </p>
               <Link
                 href="/quote"
-                className="btn btn-primary text-white text-lg px-6 py-3 rounded-md shadow-md"
+                className="btn btn-primary text-white text-lg px-6 py-3 my-10 hover:bg-black hover:text-primary rounded-md shadow-md"
               >
                 Schedule an Appointment Now
               </Link>
@@ -77,16 +78,11 @@ const Slider = () => {
         ))}
       </div>
 
-      {/* Arrows */}
-      <div className="absolute top-1/2 left-0 right-0 flex justify-between px-4 -translate-y-1/2 z-10">
-        <button onClick={prevSlide} className="btn btn-circle bg-white hover:bg-base-200 hover:text-primary">
-          ❮
-        </button>
-        <button onClick={nextSlide} className="btn btn-circle bg-white hover:bg-base-200 hover:text-primary">
-          ❯
-        </button>
-      </div>
     </div>
+          <div className="flex items-center bg-gray-700 p-4 justify-center">
+        <p>Glass Go is ready to take care of your greater Dallas Glass Repair and Replacement Needs!</p>
+      </div>
+</div>
   );
 };
 

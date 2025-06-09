@@ -11,7 +11,6 @@ export default function AutoPage() {
       <Navbar></Navbar>
       <AutoSlider></AutoSlider>
       <AutoCard></AutoCard>
-      <Areas></Areas>
       <Satisfaction></Satisfaction>
       <Footer></Footer>
     </div>

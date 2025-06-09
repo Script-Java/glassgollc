@@ -17,7 +17,7 @@ const Services = () => {
               <li>Mobile Glass Repair</li>
               <li>Side/Back Glass Replacement</li>
               <li>Truck Glass Repair</li>
-              <li>Chip Repair</li>
+              <li>Window Motor Regulator Repair & Replacement</li>
               <li>Emergency Services</li>
             </ul>
           </div>
@@ -30,17 +30,17 @@ const Services = () => {
               <li>Glass Door Repair</li>
               <li>Mirror Installation</li>
               <li>Energy-Efficient Upgrades</li>
-              <li>Screen Repair</li>
+              <li>Screen Replacement</li>
               <li>Emergency Boarding</li>
             </ul>
           </div>
 
           <div className="text-center md:text-start">
-            <h3 className="text-xl font-semibold mb-4 text-primary">Commercial Glass</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">Storm Damage Glass Repair</h3>
             <ul className="space-y-2 text-base-content">
-              <li>Storefront Windows</li>
-              <li>Glass Partitions</li>
-              <li>Glass Doors</li>
+              <li>Hail Damage Windshield Repair</li>
+              <li>Home Window Storm Damage Replacement</li>
+              <li>Emergency Glass Repair for Autos and Homes</li>
               <li>Safety & Security Glass</li>
               <li>Insulated Glass Units</li>
               <li>24/7 Glass Services</li>
@@ -52,12 +52,11 @@ const Services = () => {
             <h3 className="text-xl font-semibold mb-4 text-primary">Specialty Services</h3>
             <ul className="space-y-2 text-base-content">
               <li>Custom Cut Glass</li>
-              <li>Glass Tinting</li>
               <li>Shower Enclosures</li>
               <li>Table Tops</li>
-              <li>RV & Boat Glass</li>
-              <li>Skylight Glass</li>
-              <li>Consultations</li>
+              <li>Frameless Shower Doors</li>
+              <li>Closet Door Glass Repair</li>
+              <li>Glass Cabinet Door Replacement</li>
             </ul>
           </div>
         </div>

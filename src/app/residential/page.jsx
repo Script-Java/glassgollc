@@ -11,7 +11,6 @@ export default function ResidentialPage() {
       <Navbar></Navbar>
         <ResSlider></ResSlider>
         <ResCard></ResCard>
-        <Areas></Areas>
         <Satisfaction></Satisfaction>
       <Footer></Footer>
     </div>
