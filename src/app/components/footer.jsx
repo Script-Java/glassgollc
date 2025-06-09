@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Bar Full Width */}
-      <div className="mt-12 w-full bg-gray-700 text-white text-center text-sm py-4">
+      <div className="mt-12 w-full text-black text-center text-sm py-4">
         <p className="w-full">© {currentYear} GlassGo. All rights reserved.</p>
       </div>
     </footer>

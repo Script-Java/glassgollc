@@ -29,3 +29,15 @@
   --radius-box: 0.5rem;
   --border:     1px;
 }
+
+/* Hide scrollbar for all browsers */
+html {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;               /* Chrome, Safari */
+}
