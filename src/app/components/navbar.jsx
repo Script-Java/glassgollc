@@ -34,10 +34,10 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <ul className="hidden lg:flex items-center text-black gap-4">
             <li className="btn btn-outline hover:text-white hover:bg-black transition-colors">
-              <Link href="tel:9729003117">(972) 900-3117</Link>
+              <Link href="tel:9724086233">(972) 408-6233</Link>
             </li>
             <li className="btn btn-primary hover:bg-black hover:text-primary transition-colors">
-              <Link href="/quote">Free Quote</Link>
+              <Link href="/quote">Online Quote</Link>
             </li>
           </ul>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="flex flex-col items-center gap-4 pb-4 px-4 lg:hidden">
           <Link href="tel:+19724086233" className="btn btn-outline text-black w-full">(972) 408-6233</Link>
           <Link href="/quote" className="btn btn-primary w-full">
-            Free Quote
+            Online Quote
           </Link>
         </div>
       )}
@@ -76,8 +76,9 @@ const Navbar = () => {
         <ul className="flex flex-col p-6 gap-4 text-black">
           {[ 
             { label: "Home", href: "/" },
-            { label: "Auto", href: "/auto" },
-            { label: "Residential", href: "/residential" },
+            { label: "Auto Glass", href: "/auto" },
+            { label: "Residential Glass", href: "/residential" },
+            { label: "Online Quote", href: "/quote" },
           ].map(({ label, href }) => (
             <li key={label} className="btn btn-ghost text-left hover:bg-primary hover:text-white transition-colors">
               <Link href={href} onClick={toggleMenu}>

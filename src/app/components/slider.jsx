@@ -6,6 +6,7 @@ import img1 from "../assets/img/1.jpg";
 import img2 from "../assets/img/2.jpg";
 import img3 from "../assets/img/3.png";
 import img4 from "../assets/img/4.jpg";
+import img5 from "../assets/img/14.jpg";
 
 const slides = [
   {
@@ -13,6 +14,11 @@ const slides = [
     heading: "Trusted Auto Glass Repair in Dallas",
     description: "Professional, fast, and affordable glass solutions at your doorstep. Our expert technicians use top-grade materials to restore your vehicle’s integrity and keep you safe on the road, no matter the damage.",
   },
+{
+  image: img5,
+  heading: "Expert Auto Glass Replacement You Can Rely On",
+  description: "At GlassGo, we specialize in precision auto glass replacement using premium materials and advanced tools. Whether it’s a cracked windshield or shattered side window, our mobile team delivers quick, clean, and reliable service across Dallas."
+},
   {
     image: img2,
     heading: "Mobile Service – We Come to You",
