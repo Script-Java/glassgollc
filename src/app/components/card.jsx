@@ -10,9 +10,9 @@ import { FaCloudShowersHeavy } from "react-icons/fa";
 
 const Card = () => {
   return (
-    <section className="bg-base-100 text-black py-16 px-4 md:px-12 max-w-7xl mx-auto">
-<div className="px-6 py-12 bg-white text-gray-800">
-        <h1 className="text-3xl my-10 lg:text-3xl font-bold text-red-700">
+    <section className="bg-base-100 text-black px-4 md:px-12 max-w-7xl mx-auto">
+<div className="px-6 bg-white text-gray-800">
+        <h1 className="text-3xl my-10 lg:text-3xl text-center font-bold text-red-700">
         Experience Top-Quality Auto and Residential Glass Replacement in Dallas
       </h1>
   <div className="w-full mx-auto flex flex-col lg:flex-row gap-10">
