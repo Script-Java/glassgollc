@@ -19,7 +19,7 @@ export default function Satisfaction() {
         </p>
         <Link
           href="/quote"
-          className="btn btn-outline text-black hover:bg-primary hover:text-white text-lg px-6 py-3 rounded-md shadow-md"
+          className="btn btn-outline text-white bg-black hover:bg-primary hover:text-white text-lg px-6 py-3 rounded-md shadow-md"
         >
           Schedule an Appointment Now
         </Link>

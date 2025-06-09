@@ -9,26 +9,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-black px-6 bg-white pt-16 pb-0">
-      <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-12">
-        {/* Logo & Description */}
-        <div className="flex flex-col items-center justify-center space-y-4">
-          <Image className="w-60" src={logo} alt="Logo" />
-          <p className="text-sm opacity-80 max-w-md leading-relaxed">
-            At <strong>GlassGo</strong>, we take pride in delivering expert auto and residential glass services across Dallas and surrounding areas.
-          </p>
-        </div>
+    <footer className="text-black bg-white pt-16 pb-0">
+      <div className="max-w-7xl mx-auto flex items-center text-center gap-12">
 
         {/* Quick Links and Contact All in One Row */}
-        <div className="flex flex-col justify-center gap-12 w-full">
+        <div className="flex flex-wrap justify-center gap-12 w-full">
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="flex flex-wrap justify-center items-center gap-6 text-sm">
               <li><Link href="/" className="hover:text-primary">Home</Link></li>
-              <li><Link href="/auto" className="hover:text-primary">Auto</Link></li>
-              <li><Link href="/residential" className="hover:text-primary">Residential</Link></li>
-              <li><Link href="/quote" className="hover:text-primary">Quote</Link></li>
+              <li><Link href="/auto" className="hover:text-primary">Auto Glass</Link></li>
+              <li><Link href="/residential" className="hover:text-primary">Residential Glass</Link></li>
+              <li><Link href="/quote" className="hover:text-primary">Online Quote</Link></li>
             </ul>
           </div>
 
@@ -54,7 +47,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Bar Full Width */}
-      <div className="mt-12 w-full text-black text-center text-sm py-4">
+      <div className="mt-12 w-full bg-black text-white text-center text-sm py-4">
         <p className="w-full">© {currentYear} GlassGo. All rights reserved.</p>
       </div>
     </footer>

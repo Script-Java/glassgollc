@@ -23,7 +23,7 @@ export default function Home() {
       <Services />
 
       {/* Tools of the Trade Hero Section */}
-      <section className="relative w-full h-[600px] my-12">
+      <section className="relative w-full h-[500px] my-8">
         <Image
           src={bgImage}
           alt="Tools Background"

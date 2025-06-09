@@ -1,6 +1,6 @@
 const Services = () => {
   return (
-    <div className="py-16 bg-base-100">
+    <div className=" bg-base-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-primary">Services Offered by GlassGo</h1>
@@ -43,7 +43,6 @@ const Services = () => {
               <li>Emergency Glass Repair for Autos and Homes</li>
               <li>Safety & Security Glass</li>
               <li>Insulated Glass Units</li>
-              <li>24/7 Glass Services</li>
               <li>Custom Installations</li>
             </ul>
           </div>
