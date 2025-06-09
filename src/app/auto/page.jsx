@@ -12,6 +12,9 @@ export default function AutoPage() {
       <AutoSlider></AutoSlider>
       <AutoCard></AutoCard>
       <Satisfaction></Satisfaction>
+      <div className="flex items-center justify-center">
+        <div className="max-w-4xl w-full mt-8 bg-primary h-1"></div>
+      </div>
       <Footer></Footer>
     </div>
   );
