@@ -35,7 +35,7 @@ export default function QuotePage() {
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Auto Glass Repair and Replacement</li>
                 <li>Residential Window Repair</li>
-                <li>24/7 Emergency Glass Service</li>
+                <li>Emergency Glass Service</li>
               </ul>
             </div>
 
