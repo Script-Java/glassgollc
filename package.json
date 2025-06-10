@@ -4,25 +4,32 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "cross-env NEXT_PUBLIC_SITE_URL=https://glassgollc.com next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gensitemap": "node scripts/build-sitemap.js"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "15.3.2",
     "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "tailwind-scrollbar": "^4.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
     "daisyui": "^5.0.35",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.8"
   }
