@@ -56,7 +56,7 @@ const Card = () => {
 </div>
 
 
-<section className="px-6 py-20 bg-white text-gray-800">
+<section className="px-6 py-10 bg-white text-gray-800">
   <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
     {/* Left: Text and icon */}
     <div className="space-y-6 flex flex-col justify-between h-full">
@@ -137,7 +137,7 @@ const Card = () => {
 
 
 
-<section className="px-6 bg-white text-gray-800">
+<section className="px-6 -my-5 md:my-0 bg-white text-gray-800">
 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
   {/* Right: Image */}
   <div className="w-full h-full flex">

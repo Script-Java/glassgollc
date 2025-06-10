@@ -107,7 +107,7 @@ export default function QuoteForm() {
 
         <div>
           <Label text="Glass Repair/Replacement Needs" required={true} />
-          <textarea name="description" onChange={handleChange} className="textarea textarea-bordered w-full" required />
+          <textarea name="description" onChange={handleChange} className="textarea textarea-bordered w-full" placeholder='Please describe in detail your glass repair/replacement needs.' required />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -134,7 +134,8 @@ export default function QuoteForm() {
               <option>2 Door Convertible</option>
               <option>2 Door Hatchback</option>
               <option>4 Door Truck</option>
-              <option>2 Door Truck</option>
+              <option>4 Door Crew Cab Truck</option>
+              <option>4 Door Extended Cab Truck</option>
               <option>2 Door Extended Cab Truck</option>
               <option>2 Door Single Cab Truck</option>
               <option>Van</option>
@@ -153,7 +154,7 @@ export default function QuoteForm() {
           <strong>ATTENTION DEAR CUSTOMER:</strong> For windshield and backglass replacements on 2016 and newer vehicles, the VIN is required to ensure the correct fit and specifications.
         </p>
 
-        <button type="submit" className="btn btn-primary hover:bg-black w-full">Submit</button>
+        <button type="submit" className="btn text-white bg-black hover:bg-primary w-full">Submit</button>
         {status && <p className="text-sm pt-2 text-info">{status}</p>}
       </form>
     </div>

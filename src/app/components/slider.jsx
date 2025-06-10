@@ -85,7 +85,7 @@ const Slider = () => {
       </div>
 
     </div>
-          <div className="flex items-center bg-gray-700 p-4 justify-center">
+          <div className="flex text-center md:text-start items-center bg-gray-700 p-4 justify-center">
         <p>Glass Go is ready to take care of your greater Dallas Glass Repair and Replacement Needs!</p>
       </div>
 </div>
