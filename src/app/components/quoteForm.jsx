@@ -36,7 +36,7 @@ export default function QuoteForm() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-base-100 rounded-lg shadow-lg">
+    <div className="max-w-5xl md:max-w-7xl mx-auto p-6 bg-base-100 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Request a Glass Service Quote</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -106,26 +106,27 @@ export default function QuoteForm() {
         </div>
 
         <div>
-          <Label text="Glass Repair/Replacement Needs" required={true} />
-          <textarea name="description" onChange={handleChange} className="textarea textarea-bordered w-full" placeholder='Please describe in detail your glass repair/replacement needs.' required />
+          <Label text="Please describe in detail your glass repair/replacement needs" required={true} />
+          <textarea name="description" onChange={handleChange} className="textarea textarea-bordered w-full" required />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <Label text="Car Year" />
+            <Label text="Car Year (if applicable)" />
             <input name="carYear" onChange={handleChange} type="text" className="input input-bordered w-full" />
           </div>
           <div>
-            <Label text="Car Make" />
+            <Label text="Car Make (if applicable)" />
             <input name="carMake" onChange={handleChange} type="text" className="input input-bordered w-full" />
           </div>
           <div>
-            <Label text="Car Model" />
+            <Label text="Car Model (if applicable)" />
             <input name="carModel" onChange={handleChange} type="text" className="input input-bordered w-full" />
           </div>
           <div>
-            <Label text="Car Body Style" />
+            <Label text="Car Body Style (if applicable)" />
             <select name="carBody" onChange={handleChange} className="select select-bordered w-full">
+              <option disabled defaultValue={'None'} value="">--Select--</option>
               <option disabled selected value="">--Select--</option>
               <option>4 Door Sedan</option>
               <option>4 Door Hatchback</option>
@@ -133,7 +134,6 @@ export default function QuoteForm() {
               <option>2 Door Coupe</option>
               <option>2 Door Convertible</option>
               <option>2 Door Hatchback</option>
-              <option>4 Door Truck</option>
               <option>4 Door Crew Cab Truck</option>
               <option>4 Door Extended Cab Truck</option>
               <option>2 Door Extended Cab Truck</option>
@@ -150,11 +150,11 @@ export default function QuoteForm() {
           <input name="vin" onChange={handleChange} type="text" className="input input-bordered w-full" />
         </div>
 
-        <p className="text-sm text-warning">
+        <p className="text-sm text-primary">
           <strong>ATTENTION DEAR CUSTOMER:</strong> For windshield and backglass replacements on 2016 and newer vehicles, the VIN is required to ensure the correct fit and specifications.
         </p>
 
-        <button type="submit" className="btn text-white bg-black hover:bg-primary w-full">Submit</button>
+        <button type="submit" className="btn bg-black text-white hover:bg-primary w-full">Submit</button>
         {status && <p className="text-sm pt-2 text-info">{status}</p>}
       </form>
     </div>

@@ -151,7 +151,7 @@ const Card = () => {
   {/* Left: Text and icon */}
   <div className="space-y-8 flex flex-col justify-between">
     <div>
-      <h2 className="text-3xl font-semibold text-red-700 mb-4">
+      <h2 className="text-3xl font-semibold text-primary mb-4">
         Why Choose GlassGo for Your Glass Replacement in Dallas
       </h2>
       <p className="text-gray-700 text-base mb-4">
@@ -173,7 +173,7 @@ const Card = () => {
         Trusted Experts in Auto and Residential Glass Replacement in Dallas
       </h2>
       <p className="text-gray-700 text-base mb-4">
-        Living in <strong>Dallas</strong> means you’re no stranger to unpredictable weather, road debris, and the occasional glass damage. But with <strong>GlassGo</strong>, you can rest easy knowing that we’ve got you covered for all your glass repair and replacement needs. As a leader in <strong>Texas</strong> for glass repair and maintenance, we use advanced technology, premium resins, and expert techniques to ensure that every job is done right. Whether you’re dealing with a cracked windshield in your vehicle or a broken window in your home, we are here to provide fast, reliable, and affordable solutions.
+        Living in <strong>Dallas</strong> means you’re no stranger to unpredictable weather, road debris, and the occasional glass damage. But with <strong>GlassGo</strong>, you can rest easy knowing that we’ve got you covered for all your glass repair and replacement needs. As a leader in <strong>Dallas</strong> for glass repair and maintenance, we use advanced technology, premium resins, and expert techniques to ensure that every job is done right. Whether you’re dealing with a cracked windshield in your vehicle or a broken window in your home, we are here to provide fast, reliable, and affordable solutions.
       </p>
       <p className="text-gray-700 text-base mb-4">
         For <strong>automotive glass</strong>, we specialize in efficient repairs that often take less than an hour. Our team is dedicated to saving you money by addressing minor windshield damage with effective repairs, whenever possible, to avoid costly replacements. By opting for repairs instead of replacements, we help you preserve your vehicle’s integrity without breaking your budget.
@@ -205,7 +205,7 @@ const Card = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-red-600 mb-4">
+            <h3 className="text-xl font-semibold text-primary mb-4">
               What You Can Expect from GlassGo:
             </h3>
             <ul className="list-disc list-inside text-sm space-y-2 text-gray-700">

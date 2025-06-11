@@ -60,7 +60,7 @@ export default function Home() {
       <div className="flex items-center justify-center">
         <Link
           href="/quote"
-          className="btn bg-black text-white hover:bg-primary text-lg px-6 py-3 rounded-md shadow-md"
+          className="btn bg-blue-900 text-white hover:bg-primary text-lg px-6 py-3 rounded-md shadow-md"
         >
           Schedule an Appointment Now
         </Link>

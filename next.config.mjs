@@ -1,5 +1,5 @@
 // next.config.mjs
-import { IgnorePlugin } from 'webpack';
+import webpack from 'webpack';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,10 +13,7 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Strip accidental .html duplicates
       { source: '/:slug+.html', destination: '/:slug', permanent: true },
-
-      // Force HTTPS & single host
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'glassgollc.com' }],
@@ -42,7 +39,7 @@ const nextConfig = {
 
   webpack(config) {
     config.plugins.push(
-      new IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
+      new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
     );
     return config;
   },
