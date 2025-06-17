@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getSortedPostsData } from "@/lib/markdown";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 export default function Blog() {
     const posts = getSortedPostsData();
