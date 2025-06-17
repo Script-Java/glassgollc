@@ -2,8 +2,8 @@ import getFormattedDate from "@/lib/getFormattedDate";
 import { getSortedPostsData, getPostData } from "@/lib/markdown";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 export function generateStaticParams() {
     const posts = getSortedPostsData();
@@ -52,9 +52,9 @@ export default async function Post({ params }) {
 
     return (
         <div className="">
-            <div className="container m-auto p-4">
-                <Navbar></Navbar>
-            </div>
+            
+        <Navbar></Navbar>
+            
         <main className="prose prose-sm lg:prose-2xl prose-slate dark:prose-invert m-auto mt-40 p-4">
 
             <article className="">
@@ -64,9 +64,8 @@ export default async function Post({ params }) {
                 </p>
             </article>
         </main>
-            <div className="container m-auto mt-40 p-4">
                 <Footer></Footer>
-            </div>
+
 
         </div>
     );

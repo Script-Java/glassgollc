@@ -1,4 +1,3 @@
-// next.config.mjs
 import webpack from 'webpack';
 
 /** @type {import('next').NextConfig} */
@@ -7,7 +6,11 @@ const nextConfig = {
   output: 'standalone',
 
   images: {
-    domains: ['glassgollc.com', 'res.cloudinary.com'],
+    domains: [
+      'glassgollc.com',
+      'res.cloudinary.com',
+      'images.pexels.com' // ✅ Added support for external Pexels thumbnails
+    ],
     formats: ['image/avif', 'image/webp'],
   },
 
@@ -35,11 +38,12 @@ const nextConfig = {
     ];
   },
 
-  i18n: { locales: ['en-US'], defaultLocale: 'en-US' },
+  // Removed i18n as it's not currently supported in App Router
+  // i18n: { locales: ['en-US'], defaultLocale: 'en-US' },
 
   webpack(config) {
     config.plugins.push(
-      new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
+      new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ })
     );
     return config;
   },
