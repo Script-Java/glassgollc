@@ -42,7 +42,7 @@ const Footer = () => {
               <li><Link href="/" className="hover:text-primary hover:underline">Home</Link></li>
               <li><Link href="/auto" className="hover:text-primary hover:underline">Auto Glass</Link></li>
               <li><Link href="/residential" className="hover:text-primary hover:underline">Residential Glass</Link></li>
-              <li><Link href="/residential" className="hover:text-primary hover:underline">Tips & Tricks</Link></li>
+              <li><Link href="/blog" className="hover:text-primary hover:underline">Tips & Tricks</Link></li>
               <li><Link href="/quote" className="hover:text-primary hover:underline">Online Quote</Link></li>
             </ul>
           </div>
