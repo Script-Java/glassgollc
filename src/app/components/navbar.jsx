@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <Link href="/">
-            <Image src={logo} alt="Logo" className="w-62" />
+            <Image src={logo} alt="GlassGo logo" className="w-62" />
           </Link>
         </div>
 
@@ -42,7 +42,11 @@ const Navbar = () => {
           </ul>
 
           {/* Hamburger Button */}
-          <button className="btn btn-ghost hover:bg-primary hover:text-black z-20" onClick={toggleMenu}>
+          <button
+            className="btn btn-ghost hover:bg-primary hover:text-black z-20"
+            onClick={toggleMenu}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
             {isOpen ? (
               <MdClose className="text-3xl text-white" />
             ) : (
@@ -55,7 +59,9 @@ const Navbar = () => {
       {/* Mobile Buttons Under Logo/Hamburger */}
       {isTinyScreen && (
         <div className="flex flex-col items-center gap-4 pb-4 px-4 lg:hidden">
-          <Link href="tel:+19724086233" className="btn btn-outline text-black w-full">(972) 408-6233</Link>
+          <Link href="tel:+19724086233" className="btn btn-outline text-black w-full">
+            (972) 408-6233
+          </Link>
           <Link href="/quote" className="btn btn-primary w-full">
             Online Quote
           </Link>
@@ -69,7 +75,11 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center p-4">
-          <button className="text-2xl btn btn-ghost text-white hover:bg-primary hover:text-black" onClick={toggleMenu}>
+          <button
+            className="text-2xl btn btn-ghost text-white hover:bg-primary hover:text-black"
+            onClick={toggleMenu}
+            aria-label="Close menu"
+          >
             <MdClose />
           </button>
         </div>
@@ -99,4 +109,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-              

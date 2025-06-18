@@ -14,11 +14,11 @@ const slides = [
     heading: "Trusted Auto Glass Repair in Dallas",
     description: "Professional, fast, and affordable glass solutions at your doorstep. Our expert technicians use top-grade materials to restore your vehicle’s integrity and keep you safe on the road, no matter the damage.",
   },
-{
-  image: img5,
-  heading: "Expert Auto Glass Replacement You Can Rely On",
-  description: "At GlassGo, we specialize in precision auto glass replacement using premium materials and advanced tools. Whether it’s a cracked windshield or shattered side window, our mobile team delivers quick, clean, and reliable service across Dallas."
-},
+  {
+    image: img5,
+    heading: "Expert Auto Glass Replacement You Can Rely On",
+    description: "At GlassGo, we specialize in precision auto glass replacement using premium materials and advanced tools. Whether it’s a cracked windshield or shattered side window, our mobile team delivers quick, clean, and reliable service across Dallas.",
+  },
   {
     image: img2,
     heading: "Mobile Service – We Come to You",
@@ -36,7 +36,6 @@ const slides = [
   },
 ];
 
-
 const Slider = () => {
   const [current, setCurrent] = useState(0);
 
@@ -53,42 +52,52 @@ const Slider = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
 
   return (
-<div className="">
+    <div className="">
+      {/* Slider Container */}
       <div className="relative w-full overflow-hidden h-[600px]">
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {slides.map((slide, i) => (
-          <div key={i} className="min-w-full h-[600px] relative">
-            <Image
-              src={slide.image}
-              alt={`Slide ${i + 1}`}
-              fill
-              className="object-cover"
-              priority={i === 0}
-            />
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4">
-              <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">{slide.heading}</h2>
-              <p className="text-white text-lg md:text-xl mb-6 max-w-2xl">
-                {slide.description}
-              </p>
-              <Link
-                href="/quote"
-                className="btn btn-primary text-white text-lg px-6 py-3 my-10 hover:bg-black hover:text-primary rounded-md shadow-md"
-              >
-                Schedule an Appointment Now
-              </Link>
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {slides.map((slide, i) => (
+            <div key={i} className="min-w-full h-[600px] relative">
+              <Image
+                src={slide.image}
+                alt={`Slide ${i + 1}`}
+                fill
+                loading={i === 0 ? 'eager' : 'lazy'}
+                priority={i === 0}
+                decoding="async"
+                className="object-cover"
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4">
+                <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">
+                  {slide.heading}
+                </h2>
+                <p className="text-white text-lg md:text-xl mb-6 max-w-2xl">
+                  {slide.description}
+                </p>
+                <Link
+                  href="/quote"
+                  className="btn btn-primary text-white text-lg px-6 py-3 my-10 hover:bg-black hover:text-primary rounded-md shadow-md"
+                >
+                  Schedule an Appointment Now
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-    </div>
-          <div className="flex text-center md:text-start items-center bg-gray-700 p-4 justify-center">
-        <p>Glass Go is ready to take care of your greater Dallas Glass Repair and Replacement Needs!</p>
+      {/* Info Bar */}
+      <div className="flex text-center md:text-start items-center bg-gray-700 p-4 justify-center">
+        <p>
+          Glass Go is ready to take care of your greater Dallas Glass Repair and
+          Replacement Needs!
+        </p>
       </div>
-</div>
+    </div>
   );
 };
 
