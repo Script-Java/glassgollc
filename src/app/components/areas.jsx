@@ -5,7 +5,7 @@ export default function Areas() {
         {/* Left Column */}
         <div className="flex flex-col justify-center md:border-r-2 md:border-white pr-6">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Dear Valued Customers</h2>
+            <h2 className="text-3xl font-bold mb-4">Where Quality Meets Care</h2>
             <div className="w-16 h-[2px] bg-white mb-6"></div>
             <p className="text-lg leading-relaxed">
               At GlassGo, our experienced professionals are dedicated to
@@ -24,7 +24,7 @@ export default function Areas() {
         {/* Right Column */}
         <div className="flex flex-col justify-between pl-6">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Where Quality Meets Care</h2>
+            <h2 className="text-3xl font-bold mb-4">Areas We Serve</h2>
             <div className="w-16 h-[2px] bg-white mb-6"></div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-left mt-auto">
