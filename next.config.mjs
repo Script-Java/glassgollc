@@ -5,26 +5,26 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
 
-images: {
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'glassgollc.com',
-      pathname: '/**',
-    },
-    {
-      protocol: 'https',
-      hostname: 'res.cloudinary.com',
-      pathname: '/**',
-    },
-    {
-      protocol: 'https',
-      hostname: 'images.pexels.com',
-      pathname: '/**',
-    },
-  ],
-  formats: ['image/avif', 'image/webp'],
-},
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'glassgollc.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        pathname: '/**',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+  },
 
   async redirects() {
     return [
@@ -45,13 +45,13 @@ images: {
         headers: [
           { key: 'X-Robots-Tag', value: 'index, follow' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
   },
 
-  // Removed i18n as it's not currently supported in App Router
-  // i18n: { locales: ['en-US'], defaultLocale: 'en-US' },
+  productionBrowserSourceMaps: true,
 
   webpack(config) {
     config.plugins.push(

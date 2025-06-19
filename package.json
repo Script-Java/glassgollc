@@ -10,6 +10,7 @@
     "lint": "next lint",
     "gensitemap": "node scripts/build-sitemap.js"
   },
+ 
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
