@@ -3,16 +3,18 @@
 import React, { useEffect, useState } from "react";
 
 export default function TrustindexWidget() {
-  const [height, setHeight] = useState("1000px");
+  const [iframeHeight, setIframeHeight] = useState(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleMessage = (event) => {
       if (
         event.origin.includes("trustindex.io") &&
         event.data?.height &&
         typeof event.data.height === "number"
       ) {
-        setHeight(`${event.data.height}px`);
+        setIframeHeight(`${event.data.height}px`);
       }
     };
 
@@ -28,7 +30,7 @@ export default function TrustindexWidget() {
           style={{
             display: "block",
             width: "100%",
-            height: height,
+            height: iframeHeight || "1000px",
             border: "none",
             borderRadius: "8px",
             backgroundColor: "transparent",

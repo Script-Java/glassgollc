@@ -5,9 +5,18 @@ import Link from "next/link";
 export default function Satisfaction() {
   return (
     <div className=" text-black">
-      <div className="flex items-center mx-auto w-64 justify-center flex-col">
-        <Image src={satisfaction} alt="glassgo 100% satisfaction"></Image>
-      </div>
+<div className="flex items-center mx-auto w-64 justify-center flex-col">
+  <Image
+    src={satisfaction}
+    alt="GlassGo 100% Satisfaction"
+    width={256} // Tailwind w-64 = 256px
+    height={'auto'} // Let Next.js auto-scale based on aspect ratio
+    loading="lazy"
+    sizes="(max-width: 768px) 100vw, 256px"
+    className="object-contain"
+  />
+</div>
+
       <div className="text-center mx-auto max-w-3xl">
         <h3 className="text-3xl font-bold mb-6 text-primary">
           100% Workmanship Guarantee

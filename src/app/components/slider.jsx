@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,47 +13,55 @@ const slides = [
   {
     image: img1,
     heading: "Trusted Auto Glass Repair in Dallas",
-    description: "Professional, fast, and affordable glass solutions at your doorstep. Our expert technicians use top-grade materials to restore your vehicle’s integrity and keep you safe on the road, no matter the damage.",
+    description:
+      "Professional, fast, and affordable glass solutions at your doorstep. Our expert technicians use top-grade materials to restore your vehicle’s integrity and keep you safe on the road, no matter the damage.",
   },
   {
     image: img5,
     heading: "Expert Auto Glass Replacement You Can Rely On",
-    description: "At GlassGo, we specialize in precision auto glass replacement using premium materials and advanced tools. Whether it’s a cracked windshield or shattered side window, our mobile team delivers quick, clean, and reliable service across Dallas.",
+    description:
+      "At GlassGo, we specialize in precision auto glass replacement using premium materials and advanced tools. Whether it’s a cracked windshield or shattered side window, our mobile team delivers quick, clean, and reliable service across Dallas.",
   },
   {
     image: img2,
     heading: "Mobile Service – We Come to You",
-    description: "Convenient repairs and replacements wherever you are. Whether you're at home, work, or stuck roadside, our fully equipped mobile units deliver expert service without disrupting your day.",
+    description:
+      "Convenient repairs and replacements wherever you are. Whether you're at home, work, or stuck roadside, our fully equipped mobile units deliver expert service without disrupting your day.",
   },
   {
     image: img3,
     heading: "Residential Window Glass Replacement",
-    description: "Secure and stylish glass replacements for your home. From cracked panes to outdated windows, we upgrade your space with energy-efficient, modern glass that improves comfort and value.",
+    description:
+      "Secure and stylish glass replacements for your home. From cracked panes to outdated windows, we upgrade your space with energy-efficient, modern glass that improves comfort and value.",
   },
   {
     image: img4,
     heading: "Fast, Affordable, and Reliable Service",
-    description: "Experience quality service trusted by thousands across Dallas and surrounding area. At GlassGo, we pride ourselves on quick turnaround times, honest pricing, and customer satisfaction that keeps homeowners and drivers coming back.",
+    description:
+      "Experience quality service trusted by thousands across Dallas and surrounding area. At GlassGo, we pride ourselves on quick turnaround times, honest pricing, and customer satisfaction that keeps homeowners and drivers coming back.",
   },
 ];
 
 const Slider = () => {
+  const [mounted, setMounted] = useState(false);
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [mounted]);
 
-  const prevSlide = () =>
-    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  const nextSlide = () =>
-    setCurrent((prev) => (prev + 1) % slides.length);
+  if (!mounted) return null;
 
   return (
-    <div className="">
+    <div>
       {/* Slider Container */}
       <div className="relative w-full overflow-hidden h-[600px]">
         <div
@@ -65,8 +74,9 @@ const Slider = () => {
                 src={slide.image}
                 alt={`Slide ${i + 1}`}
                 fill
-                loading={i === 0 ? 'eager' : 'lazy'}
+                loading={i === 0 ? "eager" : "lazy"}
                 priority={i === 0}
+                fetchPriority={i === 0 ? "high" : undefined}
                 decoding="async"
                 className="object-cover"
                 sizes="100vw"

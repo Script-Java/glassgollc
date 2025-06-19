@@ -1,5 +1,4 @@
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: {
@@ -35,12 +34,34 @@ export const metadata = {
   }
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="mytheme">
+      <head>
+        {/* Preload global CSS */}
+        <link
+          rel="preload"
+          as="style"
+          href="/_next/static/css/app/layout.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/_next/static/css/app/layout.css"
+        />
+
+        {/* Inline minimal critical styles */}
+        <style>{`
+          body {
+            margin: 0;
+            background-color: #ffffff;
+            color: #111111;
+          }
+          .bg-base-100 { background-color: #ffffff; }
+          .text-white { color: #ffffff; }
+          .h-[600px] { height: 600px; }
+        `}</style>
+      </head>
       <body>{children}</body>
-      <SpeedInsights />
     </html>
   );
 }

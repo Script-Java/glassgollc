@@ -1,21 +1,18 @@
 "use client";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Slider from "./components/slider";
-import Card from "./components/card";
-import Services from "./components/services";
-import Triple from "./components/triple";
-import Satisfaction from "./components/satisfaction";
-import Areas from "./components/areas";
+
 import dynamic from "next/dynamic";
+import Navbar from "./components/navbar";
+import Slider from "./components/slider";
 
-const TrustindexWidget = dynamic(() => import("./components/reviews"), {
-  ssr: false,
-});
-
-const ToolsTrade = dynamic(() => import("./components/toolsTrade"), {
-  ssr: false,
-});
+// Dynamically import all components after Slider
+const Card = dynamic(() => import("./components/card"), { ssr: false });
+const Services = dynamic(() => import("./components/services"), { ssr: false });
+const ToolsTrade = dynamic(() => import("./components/toolsTrade"), { ssr: false });
+const Triple = dynamic(() => import("./components/triple"), { ssr: false });
+const TrustindexWidget = dynamic(() => import("./components/reviews"), { ssr: false });
+const Satisfaction = dynamic(() => import("./components/satisfaction"), { ssr: false });
+const Areas = dynamic(() => import("./components/areas"), { ssr: false });
+const Footer = dynamic(() => import("./components/footer"), { ssr: false });
 
 export default function Home() {
   return (
@@ -24,11 +21,11 @@ export default function Home() {
       <Slider />
       <Card />
       <Services />
-      <ToolsTrade></ToolsTrade>
-      <Triple></Triple>
+      <ToolsTrade />
+      <Triple />
       <TrustindexWidget />
       <Satisfaction />
-      <Areas></Areas>
+      <Areas />
       <Footer />
     </div>
   );

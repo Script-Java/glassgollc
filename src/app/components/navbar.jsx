@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import logo from "../assets/logo-black.png";
 import Link from "next/link";
@@ -9,28 +10,31 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isTinyScreen, setIsTinyScreen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsTinyScreen(window.innerWidth < 600);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const updateScreenSize = () => setIsTinyScreen(window.innerWidth < 600);
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
   return (
     <nav className="bg-white shadow-md top-0 z-50 w-full relative">
       <div className="flex max-w-7xl mx-auto justify-between items-center p-4">
-        {/* Logo */}
         <div>
           <Link href="/">
-            <Image src={logo} alt="GlassGo logo" className="w-62" />
+            <Image
+              src={logo}
+              alt="GlassGo Logo"
+              width={248}
+              height={110}
+              priority
+              style={{ height: "auto", width: "auto" }}
+            />
           </Link>
         </div>
 
-        {/* Right Side Buttons + Hamburger */}
         <div className="flex items-center gap-4">
           <ul className="hidden lg:flex items-center text-black gap-4">
             <li className="btn btn-outline hover:text-white hover:bg-black transition-colors">
@@ -41,7 +45,6 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Hamburger Button */}
           <button
             className="btn btn-ghost hover:bg-primary hover:text-black z-20"
             onClick={toggleMenu}
@@ -56,10 +59,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Buttons Under Logo/Hamburger */}
       {isTinyScreen && (
         <div className="flex flex-col items-center gap-4 pb-4 px-4 lg:hidden">
-          <Link href="tel:+19724086233" className="btn btn-outline text-black w-full">
+          <Link
+            href="tel:+19724086233"
+            className="btn btn-outline text-black w-full"
+          >
             (972) 408-6233
           </Link>
           <Link href="/quote" className="btn btn-primary w-full">
@@ -68,7 +73,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Sidebar Menu - Slides from right */}
       <div
         className={`fixed top-0 right-0 h-full w-96 bg-gray-700 shadow-lg transform transition-transform duration-300 z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -84,14 +88,17 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="flex flex-col p-6 gap-4 text-white">
-          {[ 
+          {[
             { label: "Home", href: "/" },
             { label: "Auto Glass", href: "/auto" },
             { label: "Residential Glass", href: "/residential" },
             { label: "Blogs", href: "/blog" },
             { label: "Online Quote", href: "/quote" },
           ].map(({ label, href }) => (
-            <li key={label} className="btn btn-ghost text-left hover:bg-primary hover:text-white transition-colors">
+            <li
+              key={label}
+              className="btn btn-ghost text-left hover:bg-primary hover:text-white transition-colors"
+            >
               <Link href={href} onClick={toggleMenu}>
                 {label}
               </Link>
@@ -100,9 +107,11 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Backdrop */}
       {isOpen && (
-        <div className="fixed inset-0 opacity-20 bg-black z-30" onClick={toggleMenu} />
+        <div
+          className="fixed inset-0 opacity-20 bg-black z-30"
+          onClick={toggleMenu}
+        />
       )}
     </nav>
   );
