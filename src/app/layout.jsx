@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: {
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
         `}</style>
       </head>
       <body>{children}</body>
+      <Analytics />
     </html>
   );
 }
