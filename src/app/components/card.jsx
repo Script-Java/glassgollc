@@ -15,39 +15,67 @@ const Card = () => {
           Experience Top-Quality Auto and Residential Glass Replacement in
           Dallas
         </h1>
-<div className="w-full mx-auto flex flex-col lg:flex-row gap-10">
-  {/* Left: Text Content */}
-  <div className="flex-1 space-y-6">
-    <div className="space-y-4 text-base leading-relaxed">
-      <p>At GlassGo, we are committed to providing exceptional glass repair and replacement services designed to meet your unique needs. Whether you’re dealing with a cracked windshield, a shattered car window, or a broken home window, our certified technicians deliver reliable, high-quality solutions at an affordable price. We specialize in auto glass repair, including windshield replacement in Dallas, mobile auto glass services, and side or back glass repairs, ensuring you get back on the road quickly and safely. With over 21 years of experience, we use only the finest materials to guarantee your vehicle’s glass is restored to perfection.</p>
-      <p>In addition to auto glass services, we excel in <strong>residential glass repair and replacement.</strong> From fixing broken window panes to custom shower door installations and patio glass replacements, our team delivers expertise and precision in every project. We also offer specialized solutions like frosted glass installation, dual-pane window repair, and glass table top replacements, making GlassGo your one-stop shop for all residential glass needs. Our dedication to customer satisfaction and prompt service has earned us the trust of homeowners throughout the Dallas area. When you choose GlassGo, you can expect skilled professionals, exceptional craftsmanship, and results that exceed your expectations.</p>
-      <p className="font-semibold text-gray-700">Ready to Fix Your Glass? Our mobile ready glass repair and replacement techs are ready to dispatch to your location. Schedule an appointment TODAY!</p>
-    </div>
-    <div className="w-full relative h-0 pb-[66%]">
-      <Image
-        src={img1}
-        alt="Glass service showcase"
-        fill
-        className="rounded-md object-cover"
-        sizes="(max-width: 640px) 100vw, 600px"
-        loading="lazy"
-      />
-    </div>
-  </div>
+        <div className="w-full mx-auto flex flex-col lg:flex-row gap-10">
+          {/* Left: Text Content */}
+          <div className="flex-1 space-y-6">
+            <div className="space-y-4 text-base leading-relaxed">
+              <p>
+                At GlassGo, we are committed to providing exceptional glass
+                repair and replacement services designed to meet your unique
+                needs. Whether you’re dealing with a cracked windshield, a
+                shattered car window, or a broken home window, our certified
+                technicians deliver reliable, high-quality solutions at an
+                affordable price. We specialize in auto glass repair, including
+                windshield replacement in Dallas, mobile auto glass services,
+                and side or back glass repairs, ensuring you get back on the
+                road quickly and safely. With over 21 years of experience, we
+                use only the finest materials to guarantee your vehicle’s glass
+                is restored to perfection.
+              </p>
+              <p>
+                In addition to auto glass services, we excel in{" "}
+                <strong>residential glass repair and replacement.</strong> From
+                fixing broken window panes to custom shower door installations
+                and patio glass replacements, our team delivers expertise and
+                precision in every project. We also offer specialized solutions
+                like frosted glass installation, dual-pane window repair, and
+                glass table top replacements, making GlassGo your one-stop shop
+                for all residential glass needs. Our dedication to customer
+                satisfaction and prompt service has earned us the trust of
+                homeowners throughout the Dallas area. When you choose GlassGo,
+                you can expect skilled professionals, exceptional craftsmanship,
+                and results that exceed your expectations.
+              </p>
+              <p className="font-semibold text-gray-700">
+                Ready to Fix Your Glass? Our mobile ready glass repair and
+                replacement techs are ready to dispatch to your location.
+                Schedule an appointment TODAY!
+              </p>
+            </div>
+            <div className="w-full relative h-0 pb-[66%]">
+              <Image
+                src={img1}
+                alt="Glass service showcase"
+                fill
+                className="rounded-md object-cover"
+                sizes="(max-width: 640px) 100vw, 600px"
+                loading="lazy"
+              />
+            </div>
+          </div>
 
-  {/* Right: Vertical Image */}
-  <div className="flex-1 w-full relative h-[400px] lg:h-[1000px]">
-    <Image
-      src={img5}
-      alt="Portrait car image"
-      fill
-      className="rounded-md object-cover"
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-      loading="lazy"
-    />
-  </div>
-</div>
-
+          {/* Right: Vertical Image */}
+          <div className="flex-1 w-full relative h-[400px] lg:h-[1000px]">
+            <Image
+              src={img5}
+              alt="Portrait car image"
+              fill
+              className="rounded-md object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
 
       <section className="px-6 py-10 bg-white text-gray-800">
@@ -57,7 +85,7 @@ const Card = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-primary text-2xl">
-                  <FaCloudShowersHeavy />
+                  <FaCloudShowersHeavy aria-hidden="true" focusable="false" />
                 </div>
                 <h2 className="text-3xl font-semibold text-red-700">
                   Expert Storm Damage Glass Replacement in Dallas
@@ -345,7 +373,6 @@ const Card = () => {
               src={img2}
               alt="Cozy residential window"
               className="w-full h-full max-h-[820px] object-cover rounded-lg"
-              
             />
           </div>
         </div>
