@@ -64,17 +64,19 @@ const Card = () => {
             </div>
           </div>
 
-          {/* Right: Vertical Image */}
-          <div className="flex-1 w-full relative h-[400px] lg:h-[1000px]">
-            <Image
-              src={img5}
-              alt="Portrait car image"
-              fill
-              className="rounded-md object-cover"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-              loading="lazy"
-            />
-          </div>
+<div className="flex-1 w-full relative" style={{ aspectRatio: '3 / 4', minHeight: '400px' }}>
+  <Image
+    src={img5}
+    alt="Portrait car image"
+    fill
+    className="rounded-md object-cover"
+    style={{ objectFit: 'cover', borderRadius: '0.5rem' }}
+    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+    loading="lazy"
+  />
+</div>
+
+
         </div>
       </div>
 
