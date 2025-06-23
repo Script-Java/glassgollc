@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata = {
   title: {
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>{children}</body>
       <Analytics />
+      <GoogleTagManager gtmId="GTM-MSL8HRC8" />
     </html>
   );
 }
