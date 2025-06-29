@@ -2,6 +2,7 @@ import img1 from "../assets/img/11.jpg";
 import img2 from "../assets/img/9.jpg";
 import img3 from "../assets/img/10.jpg";
 import Image from "next/image";
+import HowToCare from "./howtocare";
 
 export default function Triple() {
   return (
@@ -12,6 +13,9 @@ export default function Triple() {
           <Image src={img1} alt="Glass Repair 1" className="w-full object-cover rounded-lg" />
           <Image src={img2} alt="Glass Repair 2" className="w-full object-cover rounded-lg" />
           <Image src={img3} alt="Glass Repair 3" className="w-full object-cover rounded-lg" />
+        </div>
+        <div className="flex items-center justify-center">
+          <HowToCare />
         </div>
       </section>
 

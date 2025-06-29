@@ -14,6 +14,7 @@ const Satisfaction = dynamic(() => import("./components/satisfaction"), { ssr: f
 const Areas = dynamic(() => import("./components/areas"), { ssr: false });
 const Footer = dynamic(() => import("./components/footer"), { ssr: false });
 
+
 export default function Home() {
   return (
     <div className="bg-base-100 text-white">
