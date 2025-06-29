@@ -27,9 +27,7 @@ const Navbar = () => {
             <Image
               src={logo}
               alt="GlassGo Logo"
-              width={248}
               priority
-              style={{ height: "auto", width: "auto" }}
             />
           </Link>
         </div>
