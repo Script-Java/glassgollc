@@ -2,7 +2,7 @@ import img1 from "../assets/img/11.jpg";
 import img2 from "../assets/img/9.jpg";
 import img3 from "../assets/img/10.jpg";
 import Image from "next/image";
-import Link from "next/link";
+import HowToCare from "./howtocare";
 
 export default function Triple() {
   return (
@@ -26,18 +26,9 @@ export default function Triple() {
             className="w-full object-cover rounded-lg"
           />
         </div>
- <div className="flex items-center justify-center">
-      <section className="bg-base-100 py-10 px-4 md:px-6 w-full max-w-2xl">
-        <div className="mt-4">
-          <Link
-            href="/blog/how-to"
-            className="btn bg-blue-900 text-white hover:bg-primary text-center px-6 py-8 md:py-6 rounded-md shadow-md w-full text-sm sm:text-base md:text-lg lg:text-xl"
-          >
-            HOW TO CARE FOR A NEWLY REPLACED WINDSHIELD AND BACK GLASS
-          </Link>
-        </div>
-      </section>
-    </div>
+      <div className="">
+        <HowToCare />
+      </div>
       </section>
 
       {/* GlassGo Highlights */}
