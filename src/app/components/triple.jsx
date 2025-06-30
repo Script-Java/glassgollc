@@ -28,7 +28,7 @@ export default function Triple() {
           />
         </div>
         <div className="">
-          <div className="bg-base-100 py-10 px-4 md:px-6">
+          <div className="bg-base-100 py-10 md:px-6">
     <div className="mt-12 flex flex-col items-center justify-center">
       <Link href="/blog/how-to" className="btn bg-blue-900 p-8 md:p-4 text-white hover:bg-primary">
         HOW TO CARE FOR A NEWLY REPLACED WINDSHIELD AND BACK GLASS
