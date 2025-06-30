@@ -24,11 +24,14 @@ const Navbar = () => {
       <div className="flex max-w-7xl mx-auto justify-between items-center p-4">
         <div>
           <Link href="/">
-            <Image
-              src={logo}
-              alt="GlassGo Logo"
-              priority
-            />
+<Image
+            src={logo}
+            alt="GlassGo Logo"
+            width={248}
+            height={124}
+            style={{ color: 'transparent' }}
+            priority
+          />
           </Link>
         </div>
 

@@ -26,9 +26,15 @@ export default function Triple() {
             className="w-full object-cover rounded-lg"
           />
         </div>
-      <div className="">
-        <HowToCare />
-      </div>
+        <div className="">
+          <div className="bg-base-100 py-10 px-4 md:px-6">
+    <div className="mt-12 flex flex-col items-center justify-center">
+      <Link href="/blog/how-to" className="btn bg-primary p-8 md:p-4 text-white hover:bg-blue-700">
+        HOW TO CARE FOR A NEWLY REPLACED WINDSHIELD AND BACK GLASS
+      </Link>
+    </div>
+          </div>
+        </div>
       </section>
 
       {/* GlassGo Highlights */}
