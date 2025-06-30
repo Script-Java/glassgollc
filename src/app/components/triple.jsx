@@ -3,6 +3,7 @@ import img2 from "../assets/img/9.jpg";
 import img3 from "../assets/img/10.jpg";
 import Image from "next/image";
 import HowToCare from "./howtocare";
+import Link from "next/link";
 
 export default function Triple() {
   return (
