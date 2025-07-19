@@ -1,5 +1,13 @@
 import nodemailer from "nodemailer";
 
+// A helper function to create a Google Maps link.
+// This makes the main code cleaner.
+const createMapLink = (query) => {
+  if (!query) return '#'; // Return a non-functional link if the query is empty
+  const encodedQuery = encodeURIComponent(query);
+  return `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+};
+
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const form = req.body;
@@ -10,90 +18,95 @@ export default async function handler(req, res) {
     }
 
     try {
+      // Create the transporter using environment variables
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
-        port: parseInt(process.env.SMTP_PORT),
-        secure: true,
+        port: parseInt(process.env.SMTP_PORT, 10), // Added radix for parseInt
+        secure: true, // true for 465, false for other ports
         auth: {
           user: process.env.SMTP_USER,
           pass: process.env.SMTP_PASS,
         },
       });
 
+      // --- CORRECTED HTML ---
+      // The encodeURIComponent function is now called within the Node.js environment
+      // before the HTML is constructed.
       const mailOptions = {
         from: `"${form.firstName} ${form.lastName}" <info@glassgollc.com>`,
         to: process.env.SMTP_USER,
         replyTo: form.email,
         subject: `New Quote Request from ${form.firstName} ${form.lastName}`,
-            html: `
-    <div style="font-family: Arial, sans-serif; padding: 20px; border: 4px solid #ccc; border-radius: 10px; line-height: 1.6; color: #000;">
-<h2 style="margin-bottom: 20px;">New Request From</h2>
-<strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Go LLC</strong>
+        html: `
+<div style="font-family: Arial, sans-serif; padding: 20px; border: 4px solid #ccc; border-radius: 10px; line-height: 1.6; color: #000;">
+    <h2 style="margin-bottom: 20px;">New Request From</h2>
+    <strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Go LLC</strong>
 
-      <p><strong>Glass Service Needed:</strong><br/>
-      <a href="#">${form.serviceType || ''}</a></p>
-      <hr/>
+    <p><strong>Glass Service Needed:</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.serviceType || ''}</a></p>
+    <hr/>
 
-      <p><strong>Customer Name:</strong><br/>
-      <a href="#">${form.firstName || ''} ${form.lastName || ''}</a></p>
-      <hr/>
+    <p><strong>Customer Name:</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.firstName || ''} ${form.lastName || ''}</a></p>
+    <hr/>
 
-      <p><strong>Company Name:</strong><br/>
-      ${form.companyName || 'N/A'}</p>
-      <hr/>
+    <p><strong>Company Name:</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.companyName || 'N/A'}</a></p>
+    <hr/>
 
-      <p><strong>Email:</strong><br/>
-      <a href="mailto:${form.email}">${form.email}</a></p>
-      <hr/>
+    <p><strong>Email:</strong><br/>
+    <a href="mailto:${form.email}" style="text-decoration: none; color: #000;">${form.email}</a></p>
+    <hr/>
 
-      <p><strong>Primary Phone:</strong><br/>
-      <a href="tel:${form.primaryPhone}">${form.primaryPhone}</a></p>
-      <hr/>
+    <p><strong>Primary Phone:</strong><br/>
+    <a href="tel:${form.primaryPhone}" style="text-decoration: none; color: #000;">${form.primaryPhone}</a></p>
+    <hr/>
 
-      <p><strong>Secondary Phone:</strong><br/>
-      <a href="tel:${form.secondaryPhone || ''}">${form.secondaryPhone || 'N/A'}</a></p>
-      <hr/>
+    <p><strong>Secondary Phone:</strong><br/>
+    <a href="tel:${form.secondaryPhone || ''}" style="text-decoration: none; color: #000;">${form.secondaryPhone || 'N/A'}</a></p>
+    <hr/>
 
-      <p><strong>Street Address:</strong><br/>
-      <a href="#">${form.address || 'N/A'}</a></p>
-      <hr/>
+    <p><strong>Street Address:</strong><br/>
+    <a href="${createMapLink(form.address)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #000;">${form.address || 'N/A'}</a>
+    </p>
+    <hr/>
 
-      <p><strong>City:</strong><br/>
-      <a href="#">${form.city || ''}</a></p>
-      <hr/>
+    <p><strong>City:</strong><br/>
+    <a href="${createMapLink(form.city)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #000;">${form.city || ''}</a></p>
+    <hr/>
 
-      <p><strong>Zip Code:</strong><br/>
-      <a href="#">${form.zip || ''}</a></p>
-      <hr/>
+    <p><strong>Zip Code:</strong><br/>
+    <a href="${createMapLink(form.zip)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #000;">${form.zip || ''}</a></p>
+    <hr/>
 
-      <p><strong>Preferred Method of Contact:</strong><br/>
-      <a href="#">${form.preferredMethod || ''}</a></p>
-      <hr/>
+    <p><strong>Preferred Method of Contact:</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.preferredMethod || ''}</a></p>
+    <hr/>
 
-      <p><strong>Details of glass repair/replacement needs:</strong><br/>
-      <a href="#">${form.description || ''}</a></p>
-      <hr/>
+    <p><strong>Details of glass repair/replacement needs:</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.description || ''}</a></p>
+    <hr/>
 
-      <p><strong>Car Year (if applicable):</strong><br/>
-      <a href="#">${form.carYear || 'N/A'}</a></p>
-      <hr/>
+    <p><strong>Car Year (if applicable):</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.carYear || 'N/A'}</a></p>
+    <hr/>
 
-      <p><strong>Car Make (if applicable):</strong><br/>
-      <a href="#">${form.carMake || 'N/A'}</a></p>
-      <hr/>
+    <p><strong>Car Make (if applicable):</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.carMake || 'N/A'}</a></p>
+    <hr/>
 
-      <p><strong>Car Model (if applicable):</strong><br/>
-      <a href="#">${form.carModel || 'N/A'}</a></p>
-      <hr/>
+    <p><strong>Car Model (if applicable):</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.carModel || 'N/A'}</a></p>
+    <hr/>
 
-      <p><strong>Car Body Style (if applicable):</strong><br/>
-      <a href="#">${form.carBody || 'N/A'}</a></p>
-      <hr/>
+    <p><strong>Car Body Style (if applicable):</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.carBody || 'N/A'}</a></p>
+    <hr/>
 
-      <p><strong>VIN:</strong><br/>
-      <a href="#">${form.vin || 'N/A'}</a></p>
-    </div>
-  `,
+    <p><strong>VIN:</strong><br/>
+    <a href="#" style="text-decoration: none; color: #000;">${form.vin || 'N/A'}</a></p>
+</div>
+      `,
       };
 
       await transporter.sendMail(mailOptions);
@@ -103,6 +116,7 @@ export default async function handler(req, res) {
       res.status(500).json({ error: "Failed to send message." });
     }
   } else {
+    // Only allow POST method
     res.setHeader("Allow", ["POST"]);
     res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
