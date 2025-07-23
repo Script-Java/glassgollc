@@ -43,68 +43,68 @@ export default async function handler(req, res) {
     <strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Go LLC</strong>
 
     <p><strong>Glass Service Needed:</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.serviceType || ''}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.serviceType || ''}</a></p>
     <hr/>
 
     <p><strong>Customer Name:</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.firstName || ''} ${form.lastName || ''}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.firstName || ''} ${form.lastName || ''}</a></p>
     <hr/>
 
     <p><strong>Company Name:</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.companyName || 'N/A'}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.companyName || 'N/A'}</a></p>
     <hr/>
 
     <p><strong>Email:</strong><br/>
-    <a href="mailto:${form.email}" style="text-decoration: none; color: #000;">${form.email}</a></p>
+    <a href="mailto:${form.email}" style="text-decoration: none; color: #0066cc;">${form.email}</a></p>
     <hr/>
 
     <p><strong>Primary Phone:</strong><br/>
-    <a href="tel:${form.primaryPhone}" style="text-decoration: none; color: #000;">${form.primaryPhone}</a></p>
+    <a href="tel:${form.primaryPhone}" style="text-decoration: none; color: #0066cc;">${form.primaryPhone}</a></p>
     <hr/>
 
     <p><strong>Secondary Phone:</strong><br/>
-    <a href="tel:${form.secondaryPhone || ''}" style="text-decoration: none; color: #000;">${form.secondaryPhone || 'N/A'}</a></p>
+    <a href="tel:${form.secondaryPhone || ''}" style="text-decoration: none; color: #0066cc;">${form.secondaryPhone || 'N/A'}</a></p>
     <hr/>
 
     <p><strong>Street Address:</strong><br/>
-    <a href="${createMapLink(form.address)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #000;">${form.address || 'N/A'}</a>
+    <a href="${createMapLink(form.address)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0066cc;">${form.address || 'N/A'}</a>
     </p>
     <hr/>
 
     <p><strong>City:</strong><br/>
-    <a href="${createMapLink(form.city)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #000;">${form.city || ''}</a></p>
+    <a href="${createMapLink(form.city)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0066cc;">${form.city || ''}</a></p>
     <hr/>
 
     <p><strong>Zip Code:</strong><br/>
-    <a href="${createMapLink(form.zip)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #000;">${form.zip || ''}</a></p>
+    <a href="${createMapLink(form.zip)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0066cc;">${form.zip || ''}</a></p>
     <hr/>
 
     <p><strong>Preferred Method of Contact:</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.preferredMethod || ''}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.preferredMethod || ''}</a></p>
     <hr/>
 
     <p><strong>Details of glass repair/replacement needs:</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.description || ''}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.description || ''}</a></p>
     <hr/>
 
     <p><strong>Car Year (if applicable):</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.carYear || 'N/A'}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.carYear || 'N/A'}</a></p>
     <hr/>
 
     <p><strong>Car Make (if applicable):</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.carMake || 'N/A'}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.carMake || 'N/A'}</a></p>
     <hr/>
 
     <p><strong>Car Model (if applicable):</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.carModel || 'N/A'}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.carModel || 'N/A'}</a></p>
     <hr/>
 
     <p><strong>Car Body Style (if applicable):</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.carBody || 'N/A'}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.carBody || 'N/A'}</a></p>
     <hr/>
 
     <p><strong>VIN:</strong><br/>
-    <a href="#" style="text-decoration: none; color: #000;">${form.vin || 'N/A'}</a></p>
+    <a href="#" style="text-decoration: none; color: #0066cc;">${form.vin || 'N/A'}</a></p>
 </div>
       `,
       };
