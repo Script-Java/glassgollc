@@ -1,24 +1,34 @@
-import { NextResponse } from 'next/server';
 import Groq from 'groq-sdk';
 import { Octokit } from '@octokit/rest';
 import slugify from 'slugify';
 
-export const maxDuration = 60; 
-export const dynamic = 'force-dynamic';
+// CONFIGURATION
+// In Pages Router, config is exported as an object.
+// 'dynamic' is not needed as Pages API routes are always server-side/dynamic.
+export const config = {
+  maxDuration: 60,
+};
 
-export async function GET(request) {
-  const authHeader = request.headers.get('authorization');
+export default async function handler(req, res) {
+  // 0. ENSURE METHOD IS GET
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+
+  // 1. AUTH CHECK
+  // Note: Headers in Pages Router are properties on the object, not a Map.
+  const authHeader = req.headers.authorization;
+  
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return new NextResponse('Unauthorized', { status: 401 });
+    return res.status(401).send('Unauthorized');
   }
 
   try {
-    // 1. GENERATE CONTENT
+    // 2. GENERATE CONTENT
     const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
     const modelId = "llama-3.3-70b-versatile"; 
 
-    // UPDATED PROMPT:
-    // This instructs the AI to first pick a topic in your niche, then write about it.
     const prompt = `
       You are an expert glazier and professional blogger for a glass replacement company called GlassGo.
       
@@ -43,7 +53,7 @@ export async function GET(request) {
     const text = completion.choices[0]?.message?.content || "{}";
     const blogPost = JSON.parse(text);
 
-    // 2. PREPARE FILE PATH
+    // 3. PREPARE FILE PATH
     const date = new Date().toISOString().split('T')[0];
     const slug = slugify(blogPost.title, { lower: true, strict: true });
     
@@ -59,7 +69,7 @@ description: "${blogPost.summary}"
 ${blogPost.content}
 `;
 
-    // 3. SAVE TO GITHUB
+    // 4. SAVE TO GITHUB
     const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN });
     
     await octokit.repos.createOrUpdateFileContents({
@@ -74,7 +84,8 @@ ${blogPost.content}
       },
     });
 
-    return NextResponse.json({ 
+    // 5. SEND SUCCESS RESPONSE
+    return res.status(200).json({ 
       success: true, 
       message: `Created ${filename}`, 
       url: `https://github.com/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/blob/main/${filename}` 
@@ -82,6 +93,6 @@ ${blogPost.content}
 
   } catch (error) {
     console.error("Error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return res.status(500).json({ error: error.message });
   }
 }
