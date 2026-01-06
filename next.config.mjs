@@ -1,4 +1,4 @@
-import webpack from 'webpack';
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -53,12 +53,7 @@ const nextConfig = {
 
   productionBrowserSourceMaps: true,
 
-  webpack(config) {
-    config.plugins.push(
-      new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ })
-    );
-    return config;
-  },
+  productionBrowserSourceMaps: true,
 };
 
 export default nextConfig;
