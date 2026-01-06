@@ -5,22 +5,25 @@ import Link from "next/link";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     const posts = getSortedPostsData();
 
     return posts.map((post) => ({
-        postid: post.id, // Ensure correct key casing
+        postid: post.id,
     }));
 }
 
 export async function generateMetadata({ params }) {
-    const { postid } = await params; // await params in Next.js 15+
+    const { postid } = await params; 
+    const decodedId = decodeURIComponent(postid);
     console.log("Resolved params:", params);
 
     const posts = getSortedPostsData();
-    console.log("Posts:", posts);
+    // console.log("Posts:", posts); // Reduce noise
 
-    const post = posts.find((post) => post.id === postid);
+    const post = posts.find((post) => post.id === decodedId);
 
     if (!post) {
         console.error(`Post not found for postId: ${postid}`);
@@ -35,18 +38,19 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Post({ params }) {
-    const { postid } = await params; // await params in Next.js 15+
-    console.log("Post ID:", postid);
+    const { postid } = await params; 
+    const decodedId = decodeURIComponent(postid);
+    console.log("Post ID:", decodedId);
 
     const posts = getSortedPostsData();
 
-    const post = posts.find((post) => post.id === postid);
+    const post = posts.find((post) => post.id === decodedId);
     if (!post) {
-        console.error(`Post not found for postId: ${postid}`);
+        console.error(`Post not found for postId: ${decodedId}`);
         notFound();
     }
 
-    const { title, date, contentHtml } = await getPostData(postid);
+    const { title, date, contentHtml } = await getPostData(decodedId);
 
     const pubDate = getFormattedDate(date);
 
