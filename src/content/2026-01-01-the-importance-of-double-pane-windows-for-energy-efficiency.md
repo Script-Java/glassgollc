@@ -14,3 +14,4 @@ Double-pane windows, also known as insulated glass units (IGUs), consist of two 
 The science behind double-pane windows is simple. The gap between the two panes of glass creates a barrier that reduces heat transfer. In the winter, the warm air inside your home is kept from escaping, while in the summer, the hot air outside is kept from entering.
 ## Conclusion
 Double-pane windows are a great way to increase the energy efficiency of your home, reduce noise pollution, and protect your furniture from UV rays. If you're looking to upgrade your windows, consider double-pane windows for a more comfortable and sustainable living space.
+

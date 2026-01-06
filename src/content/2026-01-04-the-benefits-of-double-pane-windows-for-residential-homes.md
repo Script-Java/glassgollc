@@ -18,3 +18,4 @@ Double-pane windows, also known as insulated glass units (IGUs), consist of two 
 * Double-pane windows are more durable than single-pane windows and can last for many years with proper maintenance.
 * The inert gas filling the gap between the panes helps to reduce moisture buildup, which can cause damage to the window frames and glass.
 * Additionally, double-pane windows are more resistant to breakage and can withstand extreme weather conditions.
+
