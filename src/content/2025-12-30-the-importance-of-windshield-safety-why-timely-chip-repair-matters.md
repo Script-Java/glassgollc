@@ -2,6 +2,7 @@
 title: "The Importance of Windshield Safety: Why Timely Chip Repair Matters"
 date: "2025-12-30"
 description: "This blog post discusses the importance of windshield safety and the benefits of timely chip repair. It highlights the dangers of a damaged windshield, the cost savings and convenience of chip repair, and provides tips on how to identify windshield damage."
+image: "/window.svg"
 ---
 
 ## Introduction to Windshield Safety
@@ -27,4 +28,5 @@ Identifying windshield damage can be challenging, but there are some signs to lo
 
 ## Conclusion
 Windshield safety is a critical aspect of vehicle maintenance. Timely chip repair can help prevent further damage and ensure your safety on the road. If you notice any damage to your windshield, don't hesitate to contact GlassGo for prompt and professional repair services.
+
 

@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Residential Glass"
 date: "2026-01-05"
 description: "This article discusses the benefits of double-pane windows for residential glass, including energy efficiency, noise reduction, condensation reduction, and UV protection. It also explains how double-pane windows work and why they are a great option for homeowners looking to improve the comfort and efficiency of their homes."
+image: "/window.svg"
 ---
 
 
@@ -20,4 +21,5 @@ description: "This article discusses the benefits of double-pane windows for res
       ## Conclusion
       Double-pane windows are a great option for residential glass, offering a range of benefits including energy efficiency, noise reduction, condensation reduction, and UV protection. If you're looking to replace your old windows, consider installing double-pane windows to improve the comfort and efficiency of your home.
    
+
 

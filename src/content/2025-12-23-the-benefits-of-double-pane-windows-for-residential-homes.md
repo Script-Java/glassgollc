@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Residential Homes"
 date: "2025-12-23"
 description: "Double-pane windows offer numerous benefits for residential homes, including energy efficiency, noise reduction, and increased security. They consist of two panes of glass separated by a gap, providing insulation and reducing heat transfer. With their ability to lower energy bills, minimize external noise, and enhance home security, double-pane windows are a worthwhile investment for any homeowner."
+image: "/window.svg"
 ---
 
 # Introduction to Double-Pane Windows 
@@ -17,4 +18,5 @@ Double-pane windows, also known as insulated glass units (IGUs), consist of two 
 * Increased security: Double-pane windows are more difficult to break than single-pane windows, providing an additional layer of security for homes. 
 ## Conclusion 
 Double-pane windows offer a range of benefits for residential homes, from energy efficiency and noise reduction to increased security and reduced condensation. If you're considering replacing your windows, double-pane windows are definitely worth considering.
+
 

@@ -2,6 +2,7 @@
 title: "The Importance of Double-Pane Windows for Energy Efficiency"
 date: "2025-12-19"
 description: "Double-pane windows offer numerous benefits, including energy efficiency, noise reduction, and condensation reduction. They work by reducing convection currents, resulting in a more stable indoor temperature and lower energy bills. While they may be more expensive than single-pane windows, they can save you money in the long run."
+image: "/window.svg"
 ---
 
 
@@ -24,4 +25,5 @@ description: "Double-pane windows offer numerous benefits, including energy effi
       # Conclusion
       Double-pane windows are a great option for those looking to improve their home's energy efficiency. With their numerous benefits, including reduced energy bills and minimized noise pollution, they are a worthwhile investment for any homeowner.
    
+
 

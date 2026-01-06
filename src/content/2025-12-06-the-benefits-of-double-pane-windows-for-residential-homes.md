@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Residential Homes"
 date: "2025-12-06"
 description: "Double-pane windows provide numerous benefits for residential homes, including improved energy efficiency, reduced noise pollution, and enhanced security. With their ability to reduce heat transfer, block out external noises, and minimize condensation, double-pane windows are a great choice for homeowners looking to upgrade their windows."
+image: "/window.svg"
 ---
 
 
@@ -30,4 +31,5 @@ description: "Double-pane windows provide numerous benefits for residential home
 
       # Conclusion
       Double-pane windows offer numerous benefits for residential homes, from improved energy efficiency to enhanced security. If you're considering replacing your home's windows, double-pane windows are definitely worth exploring.
+
 

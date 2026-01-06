@@ -2,6 +2,7 @@
 title: "The Importance of Windshield Safety: Why Timely Repair Matters"
 date: "2025-12-26"
 description: "This blog post discusses the critical role windshields play in vehicle safety, highlighting the risks of delayed repair and the benefits of timely, professional windshield repair services, as offered by GlassGo."
+image: "/window.svg"
 ---
 
 
@@ -24,4 +25,5 @@ description: "This blog post discusses the critical role windshields play in veh
       ## Conclusion
       Your windshield is not just a component of your vehicle; it's a vital part of your safety on the road. Don't overlook the importance of timely windshield repair. For all your auto glass needs, trust the professionals at GlassGo to get you back on the road safely and efficiently.
    
+
 

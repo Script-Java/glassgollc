@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Energy Efficiency"
 date: "2025-12-27"
 description: "Discover the advantages of double-pane windows for energy efficiency, noise reduction, and condensation prevention. Learn how they work and how to choose the right type for your residential home."
+image: "/window.svg"
 ---
 
 
@@ -21,4 +22,5 @@ description: "Discover the advantages of double-pane windows for energy efficien
 
       # Conclusion
       Double-pane windows offer numerous benefits for residential homes, including energy efficiency, noise reduction, and condensation prevention. By understanding how they work and selecting the right type for your home, you can enjoy a more comfortable, sustainable, and cost-effective living space.
+
 

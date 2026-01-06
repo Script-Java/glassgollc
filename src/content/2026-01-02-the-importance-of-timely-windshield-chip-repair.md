@@ -2,6 +2,7 @@
 title: "The Importance of Timely Windshield Chip Repair"
 date: "2026-01-02"
 description: "This blog post highlights the importance of timely windshield chip repair, discussing the benefits of prompt repair, how to identify chips, and the potential consequences of delaying repair. By addressing windshield chips promptly, you can ensure your safety, prevent further damage, and save money."
+image: "/window.svg"
 ---
 
 
@@ -26,4 +27,5 @@ description: "This blog post highlights the importance of timely windshield chip
       ## Conclusion
       Windshield chip repair is a crucial aspect of vehicle maintenance. By addressing chips promptly, you can ensure your safety, prevent further damage, and save money. At GlassGo, our experienced technicians can repair your windshield chips efficiently and effectively. Don't delay – contact us today to schedule your appointment.
    
+
 

@@ -2,6 +2,7 @@
 title: "The Importance of Windshield Safety: Understanding the Role of Auto Glass in Vehicle Protection"
 date: "2025-12-28"
 description: "This article highlights the crucial role of auto glass in vehicle safety, focusing on the importance of windshield safety and its key functions. It also discusses the consequences of compromised windshield safety and provides best practices for maintaining optimal windshield integrity."
+image: "/window.svg"
 ---
 
 # Introduction to Windshield Safety 
@@ -22,4 +23,5 @@ To ensure optimal windshield safety, vehicle owners should:
 * Have the windshield replaced by a professional if necessary 
 ## Conclusion 
 In conclusion, windshield safety is a critical aspect of vehicle protection. By understanding the importance of auto glass and taking proactive steps to maintain windshield integrity, vehicle owners can significantly reduce the risk of accidents and ensure a safe driving experience.
+
 

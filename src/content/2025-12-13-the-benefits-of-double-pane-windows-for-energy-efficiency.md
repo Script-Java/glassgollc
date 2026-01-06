@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Energy Efficiency"
 date: "2025-12-13"
 description: "Discover the benefits of double-pane windows for energy efficiency, including reduced energy consumption, noise reduction, and condensation minimization. Learn how double-pane windows work and how they can improve your home's comfort and sustainability."
+image: "/window.svg"
 ---
 
 # Introduction to Double-Pane Windows
@@ -16,4 +17,5 @@ Double-pane windows, also known as insulated glass units (IGUs), consist of two 
 * **Condensation Reduction**: The sealed gap prevents moisture from entering, reducing the likelihood of condensation and frost on the windows.
 ## Conclusion
 Double-pane windows are an excellent choice for homeowners looking to improve energy efficiency, reduce noise, and minimize condensation. At GlassGo, our expert glaziers can help you install double-pane windows that meet your specific needs and budget.
+
 

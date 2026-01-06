@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Energy Efficiency"
 date: "2026-01-03"
 description: "Discover the benefits of double-pane windows for energy efficiency, including reduced heat transfer, noise reduction, and increased durability. Learn how GlassGo can help you upgrade your windows and save on your utility bills."
+image: "/window.svg"
 ---
 
 
@@ -19,4 +20,5 @@ description: "Discover the benefits of double-pane windows for energy efficiency
 
       ## Conclusion
       Double-pane windows offer numerous benefits for homeowners looking to improve their energy efficiency and reduce their environmental footprint. At GlassGo, we specialize in providing high-quality double-pane windows and professional installation services. If you're considering upgrading your windows, contact us today to learn more about our products and services.
+
 

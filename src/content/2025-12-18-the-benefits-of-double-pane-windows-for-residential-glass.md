@@ -2,6 +2,7 @@
 title: "The Benefits of Double-Pane Windows for Residential Glass"
 date: "2025-12-18"
 description: "Discover the benefits of double-pane windows for residential use, including energy efficiency, noise reduction, and UV protection, and learn how to choose the right ones for your home with the expertise of GlassGo."
+image: "/window.svg"
 ---
 
 
@@ -23,4 +24,5 @@ When selecting double-pane windows, consider factors such as the type of gas use
 
 ### Conclusion
 Double-pane windows offer numerous benefits for residential glass, from energy efficiency and noise reduction to UV protection and enhanced security. At GlassGo, we're committed to providing high-quality, professionally installed double-pane windows to help homeowners enjoy a more comfortable, sustainable living space.
+
 

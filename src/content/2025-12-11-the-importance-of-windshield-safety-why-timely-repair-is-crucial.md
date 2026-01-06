@@ -2,6 +2,7 @@
 title: "The Importance of Windshield Safety: Why Timely Repair is Crucial"
 date: "2025-12-11"
 description: "This blog post highlights the importance of windshield safety, discussing how a damaged windshield can impact vehicle structural integrity and driver visibility, and outlining the benefits of timely repair to prevent accidents and save costs."
+image: "/window.svg"
 ---
 
 
@@ -27,4 +28,5 @@ Look out for:
 
 ### Conclusion
 In conclusion, the safety of your windshield is not something to be taken lightly. Regular inspection and timely repair of any damage can significantly enhance your safety on the road, prevent further damage, and save you money in the long run. If you have any concerns about your windshield, don't hesitate to contact professionals like GlassGo for expert advice and service.
+
 

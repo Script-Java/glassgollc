@@ -2,6 +2,7 @@
 title: "The Importance of Timely Windshield Chip Repair"
 date: "2025-12-09"
 description: "This blog post highlights the importance of timely windshield chip repair, discussing the risks of leaving chips unrepaired, the benefits of prompt repair, and the process of chip repair."
+image: "/window.svg"
 ---
 
 
@@ -28,4 +29,5 @@ description: "This blog post highlights the importance of timely windshield chip
       ## Conclusion
       Don't let a small chip in your windshield turn into a big problem. Contact GlassGo today to schedule your chip repair and ensure your safety on the road.
    
+
 
