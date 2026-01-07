@@ -149,7 +149,7 @@ export default function QuoteForm() {
         </p>
 
         <button type="submit" className="btn bg-gray-700 text-white hover:bg-primary w-full">Submit</button>
-        {status && <p className="text-sm pt-2 font-bold text-success">{status}</p>}
+        {status && <p className="text-sm pt-2 font-bold text-blue-700">{status}</p>}
       </form>
     </div>
   );
